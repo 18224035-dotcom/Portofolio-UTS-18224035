@@ -1,4 +1,10 @@
 # UTS-2 My Songs for You
+---
+title: "Song for You"
+format: html
+---
+“Musik tidak hanya untuk didengar, tetapi untuk dirasakan.”
+— Stella Cometta Febriana 🌷
 
 Website ini adalah ruang kecil tempat saya menuangkan perasaan, pengalaman, dan refleksi melalui musik dan lirik.
 Setiap lagu di sini bukan sekadar rangkaian nada dan kata, tetapi cermin dari perjalanan batin—tentang cinta, kehilangan, ketulusan, dan keindahan menjadi manusia.
