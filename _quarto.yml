@@ -1,7 +1,7 @@
 project:
-  type: book
+  type: website
   output-dir: docs
-
+  
 book:
   title: "Stella Cometta Febriana"
   subtitle: "Portfolio Asesmen II-2100 KIPP"
