@@ -5,7 +5,7 @@ title: "My Stories for You"
 format: html
 ---
 
-Story 1 — Langkah yang Tidak Sempurna
+Story 1 — Langkah yang Tidak Sempurna.
 
 Waktu itu aku membaca kisah tentang seorang pelari dari Tanzania bernama John Stephen Akhwari.
 Dia ikut lomba maraton di Olimpiade Meksiko tahun 1968.
