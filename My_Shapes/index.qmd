@@ -1,6 +1,10 @@
 # UTS-4 My SHAPE (Spiritual Gifts, Heart, Abilities, Personality, Experiences)
 
+------
+title: "My Shape"
+format: html
 ---
+
 <!-- wp:heading -->
 <h2 class="wp-block-heading">UTS 4 - My Shape (Spiritual Gifts, Hearts, Abilities, Personality, Experience)</h2>
 <!-- /wp:heading -->
