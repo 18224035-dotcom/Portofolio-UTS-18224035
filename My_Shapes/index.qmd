@@ -1,26 +1,40 @@
 # UTS-4 My SHAPE (Spiritual Gifts, Heart, Abilities, Personality, Experiences)
 
 ---
-title: "My Shape"
-format: html
-4.1 Piagam diri
-Kategori	Deskripsi
-Signature Strengths (Kekuatan Khas)	Sejak kecil saya mendapat julukan dari orang tua, “Si Kidal.” Julukan itu muncul karena saya menulis dan melakukan hampir semua hal dengan tangan kiri. Sebagian orang menganggapnya hal biasa, ada yang menganggapnya istimewa, tapi tidak sedikit juga yang menganggapnya kurang sopan — terutama saat saya tanpa sadar memberi salam dengan tangan kiri. Dulu saya sempat merasa canggung dan berusaha menyesuaikan diri. Namun, seiring waktu saya sadar bahwa menjadi kidal bukanlah keterbatasan, melainkan cara unik saya melihat dunia. Dari kebiasaan itu saya belajar tentang adaptasi, kepercayaan diri, dan menghargai perbedaan. Saya tidak hanya kidal dalam cara menulis, tapi juga dalam cara berpikir — sering melihat sesuatu dari sisi yang berbeda.
-Heart (Nilai Inti & Motivasi Intrinsik)	Saya memiliki jiwa yang ambisius, mungkin karena saya anak bungsu dari tiga bersaudara. Dua kakak saya selalu menjadi panutan dan sumber motivasi untuk saya. Mereka membuat saya ingin terus berkembang dan tidak mau kalah dalam berjuang. Namun, kadang motivasi itu berubah menjadi tekanan, ketika saya memaksakan diri untuk melakukan hal-hal yang belum saya pahami hanya demi bisa selevel dengan mereka. Dari situ saya belajar bahwa ambisi tanpa keseimbangan bisa melelahkan, dan motivasi sejati bukan tentang mengimbangi orang lain, tetapi tentang bertumbuh dengan versi diri saya sendiri. Sekarang saya belajar menikmati proses, bukan hanya hasilnya.
-Aptitudes & Acquired Skills (Bakat & Keterampilan)	1. Mampu membuat desain yang tidak hanya menarik secara visual, tetapi juga fungsional.
-2. Memiliki rasa ingin tahu yang tinggi dan kemampuan belajar cepat.
-3. Memiliki empati terhadap orang lain, mudah menyesuaikan diri dalam tim, dan menjaga komunikasi agar tetap positif.
-Personality (Kepribadian)	Saya seorang INTJ, dengan karakter yang analitis dan berpikir strategis. Saya senang merencanakan sesuatu dengan detail dan memikirkan langkah-langkah ke depan sebelum bertindak. Namun, saya juga sedang belajar untuk lebih fleksibel dan terbuka pada ide-ide spontan, karena saya sadar bahwa kolaborasi sering kali melahirkan gagasan terbaik. Saya cenderung mandiri, tapi tetap menghargai kerja sama sebagai bagian dari pertumbuhan diri.
-Experiences (Pengalaman Hidup)	Dalam perjalanan hidup saya, keputusan orang tua sering kali menjadi titik awal dari berbagai hal yang membentuk saya hari ini. Kadang tidak sesuai keinginan, tapi selalu ada pelajaran berharga di baliknya. Saya belajar untuk menerima, bukan menyerah — untuk bertanggung jawab atas hasil yang muncul, meski awalnya bukan pilihan saya. Dari situ saya paham bahwa kedewasaan bukan soal kebebasan memilih, tapi bagaimana kita bersikap terhadap pilihan yang sudah ada.
-4.2 Pernyataan Misi Pribadi
-Aspek	Deskripsi
-Tujuan Hidup	Saya ingin menjadi seseorang yang meninggalkan jejak makna dan kebaikan bagi orang lain. Entah lewat karya, sistem, tulisan, atau sikap — sesuatu yang bisa tetap hidup bahkan setelah saya tidak ada.
-Motivasi Utama	Saya ingin membuktikan bahwa setiap orang bisa memberi dampak, sekecil apa pun itu. Bahwa keberhasilan sejati bukan hanya tentang pencapaian pribadi, tetapi tentang bagaimana kehadiran kita membuat orang lain ikut bertumbuh.
-Nilai-Nilai yang Dipegang	Kejujuran, empati, tanggung jawab, dan ketekunan. Bagi saya, nilai-nilai itu adalah fondasi yang membuat seseorang benar-benar berarti, bukan hanya terlihat sukses.
-Arah yang Dituju	Saya ingin berkarier di bidang teknologi dan sistem informasi yang berfokus pada manusia — bagaimana teknologi bisa membantu kehidupan sosial dan lingkungan, bukan sekadar efisien.
-4.3 Identitas Naratif
-Aspek	Deskripsi
-Siapa Saya Saat Ini	Saya seorang mahasiswa Sistem dan Teknologi Informasi yang tertarik pada hubungan antara logika, desain, dan makna di balik sebuah karya. Saya suka menggabungkan ketepatan berpikir dengan sentuhan empati agar hasil yang saya buat tidak hanya berfungsi, tapi juga terasa manusiawi.
-Proses Belajar & Pertumbuhan	Sejak kecil saya selalu punya rasa ingin tahu tinggi. Saya suka mempelajari hal baru, bahkan di luar bidang utama saya. Kadang hal ini membuat saya tidak terlalu mendalami satu bidang, tapi saya percaya bahwa pemahaman luas memberi saya perspektif unik untuk menghubungkan banyak hal. Dari keluarga, saya belajar tanggung jawab dan keteguhan. Saya sadar bahwa tidak semua keputusan bisa saya kendalikan, tapi saya selalu bisa memilih cara saya menghadapi hasilnya.
-Harapan & Arah Masa Depan	Saya ingin membangun sesuatu yang bisa bermanfaat untuk banyak orang — sebuah legacy yang bisa bertahan lebih lama dari diri saya sendiri. Saya tertarik untuk berkontribusi di bidang teknologi industri pertambangan modern, terutama di negara seperti Australia, di mana inovasi dan tanggung jawab lingkungan berjalan beriringan. Dengan kombinasi pola pikir strategis, rasa ingin tahu yang besar, dan tekad untuk tidak menyerah, saya yakin bisa tumbuh menjadi pribadi yang tidak hanya sukses, tapi juga berdampak positif bagi orang lain.
-Apakah kamu mau aku bantu lanjutkan bagian refleksi akhir (penutup singkat setelah tabel) supaya lebih utuh seperti tugas UTS sebelumnya — bagian yang menegaskan semangat “tidak menyerah sejak dahulu”?
+<!-- wp:heading -->
+<h2 class="wp-block-heading">UTS 4 - My Shape (Spiritual Gifts, Hearts, Abilities, Personality, Experience)</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading"><strong>4.1 Piagam Diri</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th><strong>Kategori</strong></th><th><strong>Deskripsi</strong></th></tr></thead><tbody><tr><td><strong>Signature Strengths (Kekuatan Khas)</strong></td><td>Sejak kecil saya mendapat julukan dari orang tua,&nbsp;<strong>“Si Kidal.”</strong>&nbsp;Julukan itu muncul karena saya menulis dan melakukan hampir semua hal dengan tangan kiri. Sebagian orang menganggapnya hal biasa, ada yang menganggapnya istimewa, tapi tidak sedikit juga yang menganggapnya kurang sopan — terutama saat saya tanpa sadar memberi salam dengan tangan kiri. Dulu saya sempat merasa canggung dan berusaha menyesuaikan diri. Namun, seiring waktu saya sadar bahwa menjadi kidal bukanlah keterbatasan, melainkan&nbsp;<strong>cara unik saya melihat dunia</strong>. Dari kebiasaan itu saya belajar tentang adaptasi, kepercayaan diri, dan menghargai perbedaan. Saya tidak hanya kidal dalam cara menulis, tapi juga dalam cara berpikir — sering melihat sesuatu dari sisi yang berbeda.</td></tr><tr><td><strong>Heart (Nilai Inti &amp; Motivasi Intrinsik)</strong></td><td>Saya memiliki&nbsp;<strong>jiwa yang ambisius</strong>, mungkin karena saya anak bungsu dari tiga bersaudara. Dua kakak saya selalu menjadi panutan dan sumber motivasi untuk saya. Mereka membuat saya ingin terus berkembang dan tidak mau kalah dalam berjuang. Namun, kadang motivasi itu berubah menjadi tekanan, ketika saya memaksakan diri untuk melakukan hal-hal yang belum saya pahami hanya demi bisa selevel dengan mereka. Dari situ saya belajar bahwa&nbsp;<strong>ambisi tanpa keseimbangan bisa melelahkan</strong>, dan motivasi sejati bukan tentang mengimbangi orang lain, tetapi tentang bertumbuh dengan versi diri saya sendiri. Sekarang saya belajar menikmati proses, bukan hanya hasilnya.</td></tr><tr><td><strong>Aptitudes &amp; Acquired Skills (Bakat &amp; Keterampilan)</strong></td><td>1. Mampu membuat desain yang tidak hanya menarik secara visual, tetapi juga fungsional.&nbsp;<br>2. Memiliki rasa ingin tahu yang tinggi dan kemampuan belajar cepat.&nbsp;<br>3. Memiliki empati terhadap orang lain, mudah menyesuaikan diri dalam tim, dan menjaga komunikasi agar tetap positif.</td></tr><tr><td><strong>Personality (Kepribadian)</strong></td><td>Saya seorang&nbsp;<strong>INTJ</strong>, dengan karakter yang analitis dan berpikir strategis. Saya senang merencanakan sesuatu dengan detail dan memikirkan langkah-langkah ke depan sebelum bertindak. Namun, saya juga sedang belajar untuk lebih fleksibel dan terbuka pada ide-ide spontan, karena saya sadar bahwa kolaborasi sering kali melahirkan gagasan terbaik. Saya cenderung mandiri, tapi tetap menghargai kerja sama sebagai bagian dari pertumbuhan diri.</td></tr><tr><td><strong>Experiences (Pengalaman Hidup)</strong></td><td>Dalam perjalanan hidup saya, keputusan orang tua sering kali menjadi titik awal dari berbagai hal yang membentuk saya hari ini. Kadang tidak sesuai keinginan, tapi selalu ada pelajaran berharga di baliknya. Saya belajar untuk menerima, bukan menyerah — untuk bertanggung jawab atas hasil yang muncul, meski awalnya bukan pilihan saya. Dari situ saya paham bahwa&nbsp;<strong>kedewasaan bukan soal kebebasan memilih, tapi bagaimana kita bersikap terhadap pilihan yang sudah ada.</strong></td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:separator -->
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading"><strong>4.2 Pernyataan Misi Pribadi</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th><strong>Aspek</strong></th><th><strong>Deskripsi</strong></th></tr></thead><tbody><tr><td><strong>Tujuan Hidup</strong></td><td>Saya ingin menjadi seseorang yang meninggalkan&nbsp;<strong>jejak makna dan kebaikan</strong>&nbsp;bagi orang lain. Entah lewat karya, sistem, tulisan, atau sikap — sesuatu yang bisa tetap hidup bahkan setelah saya tidak ada.</td></tr><tr><td><strong>Motivasi Utama</strong></td><td>Saya ingin membuktikan bahwa setiap orang bisa memberi dampak, sekecil apa pun itu. Bahwa keberhasilan sejati bukan hanya tentang pencapaian pribadi, tetapi tentang bagaimana kehadiran kita membuat orang lain ikut bertumbuh.</td></tr><tr><td><strong>Nilai-Nilai yang Dipegang</strong></td><td>Kejujuran, empati, tanggung jawab, dan ketekunan. Bagi saya, nilai-nilai itu adalah fondasi yang membuat seseorang benar-benar berarti, bukan hanya terlihat sukses.</td></tr><tr><td><strong>Arah yang Dituju</strong></td><td>Saya ingin berkarier di bidang&nbsp;<strong>teknologi dan sistem informasi</strong>&nbsp;yang berfokus pada manusia — bagaimana teknologi bisa membantu kehidupan sosial dan lingkungan, bukan sekadar efisien.</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:separator -->
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading"><strong>4.3 Identitas Naratif</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th><strong>Aspek</strong></th><th><strong>Deskripsi</strong></th></tr></thead><tbody><tr><td><strong>Siapa Saya Saat Ini</strong></td><td>Saya seorang mahasiswa&nbsp;<strong>Sistem dan Teknologi Informasi</strong>&nbsp;yang tertarik pada hubungan antara logika, desain, dan makna di balik sebuah karya. Saya suka menggabungkan ketepatan berpikir dengan sentuhan empati agar hasil yang saya buat tidak hanya berfungsi, tapi juga terasa manusiawi.</td></tr><tr><td><strong>Proses Belajar &amp; Pertumbuhan</strong></td><td>Sejak kecil saya selalu punya rasa ingin tahu tinggi. Saya suka mempelajari hal baru, bahkan di luar bidang utama saya. Kadang hal ini membuat saya tidak terlalu mendalami satu bidang, tapi saya percaya bahwa pemahaman luas memberi saya perspektif unik untuk menghubungkan banyak hal. Dari keluarga, saya belajar tanggung jawab dan keteguhan. Saya sadar bahwa tidak semua keputusan bisa saya kendalikan, tapi saya selalu bisa memilih cara saya menghadapi hasilnya.</td></tr><tr><td><strong>Harapan &amp; Arah Masa Depan</strong></td><td>Saya ingin membangun sesuatu yang bisa bermanfaat untuk banyak orang — sebuah&nbsp;<strong>legacy</strong>&nbsp;yang bisa bertahan lebih lama dari diri saya sendiri. Saya tertarik untuk berkontribusi di bidang&nbsp;<strong>teknologi industri pertambangan modern</strong>, terutama di negara seperti&nbsp;<strong>Australia</strong>, di mana inovasi dan tanggung jawab lingkungan berjalan beriringan. Dengan kombinasi&nbsp;<strong>pola pikir strategis, rasa ingin tahu yang besar, dan tekad untuk tidak menyerah</strong>, saya yakin bisa tumbuh menjadi pribadi yang tidak hanya sukses, tapi juga berdampak positif bagi orang lain.</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:heading -->
