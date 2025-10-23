@@ -1,6 +1,11 @@
 Stella Cometta Febriana
 
 UTS -1 All About me
+
+---
+title: "All About Me"
+format: html
+--- 
 Halo! Nama saya Stella Cometta Febriana, mahasiswa Semester 3 Program Studi Sistem dan Teknologi Informasi di Sekolah Teknik Elektro dan Informatika (STEI ITB).
 Website ini saya buat sebagai bagian dari tugas mata kuliah Komunikasi Interpersonal dan Publik (II2100).
 Bagi saya, komunikasi bukan sekadar berbicara — melainkan bagaimana memahami, mendengar, dan hadir sepenuhnya untuk orang lain tanpa kehilangan jati diri.
