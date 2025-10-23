@@ -24,11 +24,11 @@ book:
 
 bibliography: references.bib
 
+website:
+  title: "Portofolio-UTS-18224035"
 format:
   html:
-    theme:
-      - cosmo
-      - brand
+    theme: cosmo
   pdf:
     documentclass: scrreprt
 
