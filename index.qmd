@@ -1,22 +1,15 @@
-# Selamat Berjumpa {.unnumbered}
+# Selamat Berjumpa HALOO SEMUANYA 
 
-![About Me](images/AZRL.png){width=950%}
-
-Armein Z R Langi adalah Guru Besar di Sekolah Teknik Elektro dan Informatika ITB, dosen ITB sejak Desember 1987, mantan Rektor Universitas Kristen Maranatha, 1 Maret 2016 s/d 29 Februari 2020, mantan Kepala Pusat Penelitian Teknologi Informasi dan Komunikasi (PP-TIK) ITB November 2005 s/d Maret 2010, dan Sekretaris MWA ITB Mei 2010-Jan 2011.
-
-Lahir di Tomohon 1962 dari pasangan Manado dan Sunda. Saat ini tinggal di Bandung, menikah dengan Ina dan dikaruniai empat anak. Ayah dari Gladys, Kezia, Andria, dan Marco.
-
-Sharing pikiran singkat ada di blog <https://azrl.wordpress.com>. Facebookk: armein_langi
-
-Andria, putri saya, lumayan sering membaca blog ini.  Dia juga sumber inspirasi tulisan saya.  Dia senang menceritakan jokes pada saya, dan kalau bagus saya tulis di sini, terutama seri Kocak Ala Andria.  Dan dia suka heran, karena isinya sudah berbeda.  Memang saya senang mengubah-ngubah cerita karena saya tidak suka menjiplak mentah-mentah.  Minggu lalu tidak sengaja dia memuji tulisan blog ini.
+--
+title: "HALOOO SEMUANYA!"
+format: html
+editor: Stella Febriana
+---
 
 
-“Papa… papa… “, tanyanya, “Tulisan blog papa itu copy-paste dari tulisan orang ya…?”
+Hai, aku Stella Cometta febriana. Orang-orang bilang aku pendiam, tapi pikiranku jarang berhenti bekerja. Aku suka membongkar sesuatu, mencari tahu bagaimana semuanya berjalan—entah itu baris kode, atau bahkan cara orang berpikir.
 
-Haa? Ya nggak mungkin lah.  Kecuali lirik lagu, semua artikel di sini ditulis sendiri.
-
-“Ah bohong, soalnya tulisannya terlalu banyak….” katanya tetap tidak percaya, “Nggak mungkinlah papa tulis sendiri…”
-
-Hehe, saya tersenyum sambil membelai Andria, karena buat saya itu adalah ultimate compliment.  Thanks sweetheart…
-
-Jadi kalau orang tidak percaya bahwa sesuatu itu karya anda, anda yang buat, jangan marah.  Itu adalah pujian yang sejati.
+Aku suka perasaan saat menemukan hal baru. Rasanya seperti membuka jendela dan melihat dunia dari sudut yang belum pernah kulihat sebelumnya. Kadang aku bisa tenggelam berjam-jam cuma buat memahami satu hal kecil, tapi aku menikmati proses itu.
+Tapi jujur aja, aku juga sering membandingkan diri dengan orang lain. Aku suka berpikir, “kok dia bisa sejauh itu ya?” atau “kenapa aku belum bisa kayak gitu?”. Kadang hal itu bikin aku lemah, bikin aku ragu sama diri sendiri. Tapi di sisi lain, aku belajar buat pelan-pelan berdamai. Karena setiap orang punya waktunya, dan nggak semua hal harus dilakukan dengan kecepatan yang sama.
+Sekarang, aku cuma ingin terus belajar dan berkembang, tanpa terburu-buru. Aku ingin menikmati prosesnya, sekecil apa pun langkahnya. Karena aku percaya, setiap hal baru yang kupelajari, sekecil apa pun, tetap berarti.
+Jadi kalau kamu tanya siapa aku — aku adalah seseorang yang selalu penasaran, kadang terlalu keras pada diri sendiri, tapi terus mencoba untuk tumbuh dan menemukan versi terbaik dari diriku, satu hal baru setiap hariny
