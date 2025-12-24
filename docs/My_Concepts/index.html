@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="AI dan Ketergantungan Mahasiswa: saat bantuan pelan-pelan mengambil alih cara berpikir. Artikel dan kerangka peran untuk pendidikan yang sehat di era AI." />
+  <meta name="description" content="Ruang refleksi tentang AI dan ketergantungan mahasiswa: bagaimana kebiasaan AI membentuk cara belajar, risikonya, dan cara membangun ekosistem pendidikan yang sehat." />
   <title>AI & Ketergantungan Mahasiswa</title>
 
   <style>
@@ -29,7 +29,7 @@
         radial-gradient(900px 520px at 85% 10%, rgba(123,255,200,.18), transparent 55%),
         radial-gradient(800px 600px at 50% 100%, rgba(122,167,255,.10), transparent 55%),
         var(--bg);
-      line-height:1.55;
+      line-height:1.65;
     }
     a{color:inherit; text-decoration:none}
     .wrap{max-width:var(--max); margin:0 auto; padding:24px}
@@ -39,7 +39,7 @@
     }
     .brand{
       display:flex; align-items:center; gap:10px;
-      font-weight:700; letter-spacing:.2px;
+      font-weight:800; letter-spacing:.2px;
     }
     .logo{
       width:34px; height:34px; border-radius:12px;
@@ -62,12 +62,11 @@
       border-radius: calc(var(--radius) + 6px);
       box-shadow: var(--shadow);
       overflow:hidden;
-      position:relative;
     }
     .hero-inner{
-      padding:42px 26px;
+      padding:44px 26px;
       display:grid;
-      grid-template-columns: 1.25fr .75fr;
+      grid-template-columns: 1.2fr .8fr;
       gap:22px;
       align-items:center;
     }
@@ -89,12 +88,12 @@
     }
     h1{
       margin:12px 0 10px;
-      font-size: clamp(28px, 3.2vw, 44px);
-      line-height:1.12;
-      letter-spacing:-.6px;
+      font-size: clamp(28px, 3.2vw, 46px);
+      line-height:1.1;
+      letter-spacing:-.8px;
     }
     .lead{color:var(--muted); font-size: 16.5px; margin:0 0 18px}
-    .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px}
+    .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px}
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
       gap:10px;
@@ -103,7 +102,7 @@
       border:1px solid var(--line);
       background: rgba(255,255,255,.03);
       color: var(--text);
-      font-weight:600;
+      font-weight:700;
     }
     .btn:hover{background: rgba(255,255,255,.06)}
     .btn.primary{
@@ -114,11 +113,12 @@
       border-color: rgba(122,167,255,.75);
       background: linear-gradient(135deg, rgba(122,167,255,.32), rgba(123,255,200,.14));
     }
+
     .hero-card{
       border:1px solid var(--line);
       border-radius: var(--radius);
       background: rgba(17,26,51,.55);
-      padding:16px;
+      padding:18px;
     }
     .hero-card h3{margin:0 0 6px; font-size: 16px}
     .hero-card p{margin:0; color:var(--muted); font-size: 14.5px}
@@ -174,16 +174,21 @@
     }
     .li b{display:block; margin-bottom:2px; color:var(--text)}
     .li span{color:var(--muted); font-size: 14.5px}
+
     .two-col{grid-column: span 6}
     .three-col{grid-column: span 4}
     .full{grid-column: 1 / -1}
-    .footer{
-      margin-top:28px;
-      padding:20px 0 40px;
-      color:var(--muted);
-      border-top:1px solid var(--line);
+
+    .quote{
+      padding:16px 16px;
+      border-radius: var(--radius);
+      border:1px dashed rgba(255,255,255,.14);
+      background: rgba(255,255,255,.02);
+      color: var(--muted);
+      margin-top:12px;
+      font-size: 15px;
     }
-    .small{font-size: 13.5px}
+    .quote b{color:var(--text)}
     .divider{height:1px; background:var(--line); margin:14px 0}
     .badge{
       display:inline-flex; align-items:center; gap:8px;
@@ -200,6 +205,32 @@
       box-shadow: 0 0 0 6px rgba(123,255,200,.08);
       display:inline-block;
     }
+    details{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:14px 14px;
+      background: rgba(17,26,51,.42);
+    }
+    summary{
+      cursor:pointer;
+      font-weight:700;
+      color:var(--text);
+      list-style:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    summary::-webkit-details-marker{display:none}
+    .chev{opacity:.75}
+    details p{margin:10px 0 0; color:var(--muted)}
+    .footer{
+      margin-top:28px;
+      padding:20px 0 40px;
+      color:var(--muted);
+      border-top:1px solid var(--line);
+    }
+    .small{font-size: 13.5px}
 
     @media (max-width: 860px){
       .hero-inner{grid-template-columns:1fr}
@@ -217,39 +248,42 @@
         <span>AI & Ketergantungan Mahasiswa</span>
       </a>
       <div class="menu" role="navigation" aria-label="Menu">
-        <a href="#fenomena">Fenomena</a>
+        <a href="#intro">Intro</a>
+        <a href="#penting">Kenapa Penting</a>
         <a href="#pola">Pola</a>
         <a href="#dampak">Dampak</a>
         <a href="#peran">Peran</a>
-        <a href="#mahakarya">Inti Mahakarya</a>
+        <a href="#mahakarya">Mahakarya</a>
       </div>
     </nav>
 
+    <!-- HERO -->
     <section id="top" class="hero" aria-label="Bagian pembuka">
       <div class="hero-inner">
         <div>
-          <div class="pill"><span aria-hidden="true"></span>Ruang refleksi: belajar yang tetap manusiawi</div>
-          <h1>Ketika “bantuan” pelan-pelan mengambil alih cara berpikir.</h1>
+          <div class="pill"><span aria-hidden="true"></span>Halo! 👋 Selamat datang</div>
+          <h1>Ruang refleksi tentang AI dan ketergantungan mahasiswa.</h1>
           <p class="lead">
-            AI di kampus bisa menjadi akselerator belajar—atau tanpa sadar menjadi kebiasaan yang menggantikan proses
-            membaca, menalar, menulis, merevisi, dan menemukan argumen sendiri.
+            Fenomena ini pelan-pelan tumbuh, sering terlihat “wajar”, tapi diam-diam mengubah cara kita belajar:
+            <b>dari proses berpikir</b> menjadi <b>hasil instan</b>.
           </p>
+
           <div class="cta-row">
-            <a class="btn primary" href="#fenomena" aria-label="Mulai membaca">
-              Mulai Baca
-              <span aria-hidden="true">→</span>
-            </a>
-            <a class="btn" href="#mahakarya" aria-label="Lihat inti mahakarya">Lihat Inti Mahakarya</a>
+            <a class="btn primary" href="#intro">Mulai Baca <span aria-hidden="true">→</span></a>
+            <a class="btn" href="#mahakarya">Lihat Inti Mahakarya</a>
           </div>
         </div>
 
         <aside class="hero-card" aria-label="Ringkasan cepat">
           <h3>Ringkasan cepat</h3>
-          <p>Masalahnya bukan AI dipakai atau dilarang, tapi pergeseran fungsi belajar: dari latihan kognitif menjadi konsumsi output.</p>
+          <p>
+            AI bisa membantu belajar, tetapi juga bisa mengambil alih cara berpikir. Kuncinya adalah membangun kebiasaan
+            dan sistem yang menjadikan AI sebagai <b>pelatih kognitif</b>, bukan pengganti intelektual.
+          </p>
           <div class="stat-grid" aria-label="Sorotan">
-            <div class="stat"><span>Fokus utama</span><b>Proses berpikir</b></div>
+            <div class="stat"><span>Fokus</span><b>Proses belajar</b></div>
             <div class="stat"><span>Risiko</span><b>Delegasi kognitif</b></div>
-            <div class="stat"><span>Arah sehat</span><b>AI sebagai pelatih</b></div>
+            <div class="stat"><span>Solusi</span><b>AI sebagai pelatih</b></div>
           </div>
         </aside>
       </div>
@@ -257,160 +291,310 @@
   </header>
 
   <main class="wrap">
-    <section id="fenomena" class="grid" aria-label="Pendahuluan fenomena">
+    <!-- INTRO -->
+    <section id="intro" class="grid" aria-label="Intro">
       <article class="card full">
-        <p class="kicker">Pendahuluan Fenomena</p>
-        <h2>Produktif di output, rapuh di proses.</h2>
+        <p class="kicker">Intro</p>
+        <h2>AI membantu — tapi bisa juga “membiasakan” kita tidak belajar.</h2>
         <p>
-          Banyak mahasiswa mampu menghasilkan tulisan yang rapi dan “akademik” dalam waktu singkat, tetapi kesulitan
-          menjelaskan logika di baliknya. Kebingungan yang seharusnya menjadi pintu belajar justru ditukar dengan jawaban instan.
-          Lama-lama, kemampuan yang tumbuh bukan daya nalar—melainkan cara tercepat menyelesaikan tugas.
+          Di kampus, AI awalnya hadir sebagai penolong: membantu menjelaskan konsep rumit, merapikan tulisan, memberi contoh,
+          sampai mencarikan referensi. Tapi di balik kemudahan itu, ada pertanyaan penting yang perlu kita berani ajukan:
         </p>
+
+        <div class="quote">
+          <b>Apakah AI sedang membantu mahasiswa belajar… atau justru mengambil alih cara berpikirnya?</b>
+        </div>
+
         <div class="divider" aria-hidden="true"></div>
-        <span class="badge"><i aria-hidden="true"></i> Fokus: mengembalikan belajar sebagai latihan kemampuan</span>
+
+        <p>
+          Di sini, kita membahas bagaimana ketergantungan itu muncul, dampaknya yang sering tidak terlihat, dan bagaimana AI
+          seharusnya ditempatkan sebagai <b>pelatih kognitif</b>, bukan pengganti kerja intelektual.
+        </p>
+
+        <div class="divider" aria-hidden="true"></div>
+        <span class="badge"><i aria-hidden="true"></i> Fokus: belajar tetap manusiawi & bertanggung jawab</span>
       </article>
     </section>
 
-    <section id="pola" class="grid" aria-label="Pola ketergantungan">
+    <!-- WHY IMPORTANT -->
+    <section id="penting" class="grid" aria-label="Kenapa penting">
       <article class="card two-col">
-        <p class="kicker">Pola Ketergantungan</p>
-        <h2>Ketergantungan muncul bertahap.</h2>
+        <p class="kicker">Kenapa Ini Penting?</p>
+        <h2>Pendidikan bukan pabrik teks.</h2>
         <p>
-          Ketergantungan sering terlihat “normal” karena semua orang melakukannya. Padahal yang bergeser adalah titik awal:
-          mahasiswa tidak lagi memulai dari berpikir, melainkan dari hasil.
+          Pendidikan adalah proses membentuk kemampuan: menalar, menyusun argumen, memecahkan masalah,
+          dan bertanggung jawab atas ide sendiri. Kalau AI membuat mahasiswa semakin cepat “selesai”,
+          tetapi semakin jarang “berproses”, maka yang terjadi bukan kemajuan — melainkan
+          <b>delegasi kognitif</b>: kemampuan berpikir dipinjamkan ke mesin, lalu perlahan melemah.
         </p>
       </article>
 
       <article class="card two-col">
-        <p class="kicker">Empat pola yang paling sering</p>
+        <p class="kicker">Yang sering kelihatan vs yang sebenarnya terjadi</p>
         <ul class="list">
           <li class="li">
             <span class="dot" aria-hidden="true"></span>
-            <div><b>Ketergantungan Ide</b><span>Sulit memulai tanpa “dipancing” oleh AI.</span></div>
+            <div>
+              <b>Kelihatan:</b>
+              <span>Tugas cepat selesai, tulisan rapi, presentasi “aman”.</span>
+            </div>
           </li>
           <li class="li">
             <span class="dot" aria-hidden="true"></span>
-            <div><b>Ketergantungan Struktur</b><span>AI menentukan alur; mahasiswa hanya mengisi.</span></div>
+            <div>
+              <b>Sebenarnya:</b>
+              <span>Kemampuan memulai, menalar, dan membela argumen menjadi lebih rapuh.</span>
+            </div>
           </li>
           <li class="li">
             <span class="dot" aria-hidden="true"></span>
-            <div><b>Ketergantungan Bahasa</b><span>Teks rapi, tapi gagap menjelaskan dengan kata sendiri.</span></div>
-          </li>
-          <li class="li">
-            <span class="dot" aria-hidden="true"></span>
-            <div><b>Ketergantungan Keputusan</b><span>AI memilih pendapat; latihan menilai jadi hilang.</span></div>
+            <div>
+              <b>Efek jangka panjang:</b>
+              <span>Mahasiswa sulit menghadapi masalah baru tanpa “ditolong AI”.</span>
+            </div>
           </li>
         </ul>
       </article>
     </section>
 
+    <!-- PATTERNS -->
+    <section id="pola" class="grid" aria-label="Pola ketergantungan">
+      <article class="card full">
+        <p class="kicker">Pola Ketergantungan yang Sering Terjadi</p>
+        <h2>Ketergantungan tidak datang tiba-tiba. Ia tumbuh jadi kebiasaan.</h2>
+        <p>
+          Ketergantungan biasanya muncul bertahap, dan terlihat “normal” karena semua orang melakukannya.
+          Berikut pola yang paling sering muncul pada mahasiswa:
+        </p>
+
+        <ul class="list" style="margin-top:14px">
+          <li class="li">
+            <span class="dot" aria-hidden="true"></span>
+            <div>
+              <b>Ketergantungan Ide</b>
+              <span>Mahasiswa sulit memulai tulisan tanpa “dipancing” AI. Kertas kosong terasa menakutkan.</span>
+            </div>
+          </li>
+          <li class="li">
+            <span class="dot" aria-hidden="true"></span>
+            <div>
+              <b>Ketergantungan Struktur</b>
+              <span>AI menentukan alur berpikir: pembukaan–argumen–contoh–kesimpulan. Mahasiswa hanya mengisi.</span>
+            </div>
+          </li>
+          <li class="li">
+            <span class="dot" aria-hidden="true"></span>
+            <div>
+              <b>Ketergantungan Bahasa</b>
+              <span>Tulisan rapi dan akademik, tetapi ketika diminta menjelaskan dengan kata sendiri, gagap.</span>
+            </div>
+          </li>
+          <li class="li">
+            <span class="dot" aria-hidden="true"></span>
+            <div>
+              <b>Ketergantungan Keputusan</b>
+              <span>AI dipakai untuk menentukan pendapat: mana yang benar, mana yang bagus. Latihan menilai hilang.</span>
+            </div>
+          </li>
+        </ul>
+
+        <div class="divider" aria-hidden="true"></div>
+
+        <details>
+          <summary>
+            Contoh situasi nyata di kampus
+            <span class="chev" aria-hidden="true">▾</span>
+          </summary>
+          <p>
+            <b>Contoh 1:</b> Mahasiswa mengumpulkan esai 5 halaman dalam 30 menit, namun saat ditanya “apa argumen utama kamu?” ia bingung menjawab.
+            <br/><br/>
+            <b>Contoh 2:</b> Saat diskusi kelas, mahasiswa aktif mengutip konsep, tapi tidak bisa memberi contoh dari konteks lokal atau pengalaman sendiri.
+            <br/><br/>
+            <b>Contoh 3:</b> Tugas kelompok rapi, tetapi ketika dibagi per bagian, tidak ada yang benar-benar memahami keseluruhan struktur gagasan.
+          </p>
+        </details>
+      </article>
+    </section>
+
+    <!-- IMPACT -->
     <section id="dampak" class="grid" aria-label="Dampak">
       <article class="card full">
-        <p class="kicker">Dampak yang sering tidak disadari</p>
-        <h2>Nilai bisa naik, tetapi fondasi bisa rapuh.</h2>
+        <p class="kicker">Dampak yang Paling Berbahaya (dan Sering Tidak Disadari)</p>
+        <h2>Nilai bisa naik—tetapi fondasi intelektual bisa melemah.</h2>
         <p class="hl">
-          Ketergantungan AI tidak selalu menurunkan performa akademik. Justru kadang terlihat membaik—dan itulah yang membuatnya berbahaya.
+          Ketergantungan AI tidak selalu menurunkan nilai. Justru kadang menaikkan performa terlihat, tetapi menurunkan
+          kemampuan yang tidak terlihat: ketahanan berpikir, orisinalitas, dan kedewasaan argumen.
         </p>
+
         <ul class="list" aria-label="Daftar dampak">
           <li class="li">
             <span class="dot" aria-hidden="true"></span>
-            <div><b>Berpikir kritis melemah</b><span>Otot nalar jarang dipakai, sehingga cepat lelah saat menghadapi masalah baru.</span></div>
+            <div><b>Otot berpikir kritis melemah</b><span>Karena jarang dipakai, otak “terbiasa ditolong”, bukan dilatih.</span></div>
           </li>
           <li class="li">
             <span class="dot" aria-hidden="true"></span>
-            <div><b>Daya tahan belajar turun</b><span>Sedikit sulit → refleks mencari jalan pintas.</span></div>
+            <div><b>Daya tahan belajar turun</b><span>Sedikit sulit → langsung cari jawaban instan, bukan bertahan di proses.</span></div>
           </li>
           <li class="li">
             <span class="dot" aria-hidden="true"></span>
-            <div><b>Keaslian intelektual memudar</b><span>Ide terasa “bukan punya saya”, sehingga sulit membangun identitas akademik.</span></div>
+            <div><b>Keaslian intelektual memudar</b><span>Ide terasa bukan milik sendiri, sehingga sulit membangun identitas akademik.</span></div>
           </li>
           <li class="li">
             <span class="dot" aria-hidden="true"></span>
-            <div><b>Percaya diri palsu</b><span>Yakin pada hasil, bukan pada kemampuan menjelaskan dan mempertanggungjawabkan.</span></div>
+            <div><b>Percaya diri akademik palsu</b><span>Yakin pada hasil, bukan pada kemampuan menjelaskan & mempertanggungjawabkan.</span></div>
+          </li>
+        </ul>
+
+        <div class="divider" aria-hidden="true"></div>
+
+        <details>
+          <summary>
+            Tanda-tanda ketergantungan yang bisa kamu cek sendiri
+            <span class="chev" aria-hidden="true">▾</span>
+          </summary>
+          <p>
+            Kamu mungkin mulai tergantung AI jika:
+            <br/>• kamu tidak bisa menulis 1 paragraf tanpa AI,
+            <br/>• kamu tidak bisa menjelaskan tulisanmu dalam 1 menit,
+            <br/>• kamu jarang membaca sumber asli karena merasa ringkasan sudah cukup,
+            <br/>• kamu merasa “kosong” ketika diminta berpendapat tanpa bantuan.
+          </p>
+        </details>
+      </article>
+    </section>
+
+    <!-- ROLES -->
+    <section id="peran" class="grid" aria-label="Peran kunci">
+      <article class="card full">
+        <p class="kicker">Peran Kunci dalam Fenomena Ini</p>
+        <h2>Masalah ini tidak bisa diselesaikan oleh satu pihak saja.</h2>
+        <p>
+          Ketergantungan AI adalah fenomena sistemik: ada kebiasaan individu, desain tugas, budaya akademik, dan
+          aturan kampus yang saling memengaruhi.
+        </p>
+      </article>
+
+      <article class="card three-col">
+        <p class="kicker">1) AI</p>
+        <h3>Akselerator vs Pengganti</h3>
+        <p>
+          AI bisa mempercepat akses dan pemahaman, tetapi bisa jadi substitutor berpikir saat menggantikan analisis,
+          argumen, dan keputusan.
+        </p>
+      </article>
+
+      <article class="card three-col">
+        <p class="kicker">2) Mahasiswa</p>
+        <h3>Pemilik ide</h3>
+        <p>
+          Mahasiswa harus tetap jadi pemilik gagasan. AI boleh membantu latihan, tetapi posisi dan pemahaman tetap wajib
+          lahir dari diri sendiri.
+        </p>
+      </article>
+
+      <article class="card three-col">
+        <p class="kicker">3) Dosen</p>
+        <h3>Penjaga proses</h3>
+        <p>
+          Dosen menjaga kualitas proses: menilai langkah berpikir, merancang tugas berbasis refleksi, serta melatih literasi
+          AI (verifikasi, sitasi, bias, etika).
+        </p>
+      </article>
+
+      <article class="card three-col">
+        <p class="kicker">4) Kampus</p>
+        <h3>Budaya & sistem</h3>
+        <p>
+          Kampus membangun pedoman yang jelas: AI boleh dipakai, tapi transparan dan bertanggung jawab.
+          Asesmen harus menguji pemahaman, bukan hanya teks.
+        </p>
+      </article>
+
+      <article class="card full">
+        <p class="kicker">Prinsip sehat: AI sebagai pelatih, bukan pengganti</p>
+        <ul class="list">
+          <li class="li">
+            <span class="dot" aria-hidden="true"></span>
+            <div><b>Gunakan AI untuk bertanya balik</b><span>Minta AI menguji logikamu, bukan menuliskan jawabanmu.</span></div>
+          </li>
+          <li class="li">
+            <span class="dot" aria-hidden="true"></span>
+            <div><b>Minta opsi argumen, lalu kamu memilih</b><span>Latih posisi: kamu yang memutuskan dan membela.</span></div>
+          </li>
+          <li class="li">
+            <span class="dot" aria-hidden="true"></span>
+            <div><b>Jadikan AI alat simulasi</b><span>Simulasikan debat, presentasi, atau tanya jawab.</span></div>
+          </li>
+          <li class="li">
+            <span class="dot" aria-hidden="true"></span>
+            <div><b>Tahap “wajib manusia”</b><span>Refleksi, contoh lokal, pengalaman pribadi, dan pembuktian pemahaman.</span></div>
           </li>
         </ul>
       </article>
     </section>
 
-    <section id="peran" class="grid" aria-label="Peran para aktor">
-      <article class="card three-col">
-        <p class="kicker">Peran AI</p>
-        <h3>Akselerator ↔ Pengganti</h3>
-        <p>
-          AI mempercepat akses dan pemahaman, tetapi bisa menjadi substitutor berpikir saat menggantikan analisis, argumen,
-          dan keputusan.
-        </p>
-      </article>
-
-      <article class="card three-col">
-        <p class="kicker">Peran Mahasiswa</p>
-        <h3>Pemilik ide</h3>
-        <p>
-          Mahasiswa harus tetap menjadi subjek belajar: memulai dari pemahaman, lalu memakai AI untuk latihan—bukan untuk mengganti proses.
-        </p>
-      </article>
-
-      <article class="card three-col">
-        <p class="kicker">Peran Dosen</p>
-        <h3>Penjaga proses</h3>
-        <p>
-          Dosen menilai proses, merancang asesmen yang memunculkan nalar, dan membangun literasi AI: verifikasi, sitasi, bias, etika.
-        </p>
-      </article>
-
-      <article class="card three-col">
-        <p class="kicker">Peran Kampus</p>
-        <h3>Budaya & sistem</h3>
-        <p>
-          Kampus membangun aturan yang jelas dan manusiawi: AI boleh dipakai, transparan, dan penilaian menguji pemahaman, bukan hanya teks.
-        </p>
-      </article>
-    </section>
-
+    <!-- MASTERPIECE -->
     <section id="mahakarya" class="grid" aria-label="Inti mahakarya">
       <article class="card full">
         <p class="kicker">✦ Inti Mahakarya</p>
         <h2>AI seharusnya memperkuat manusia, bukan menggantikannya.</h2>
         <p>
-          Mahakarya dari gagasan ini adalah membangun ekosistem pendidikan yang menjadikan AI sebagai <b>pelatih kognitif</b>:
-          alat untuk melatih bertanya lebih tajam, menalar lebih runtut, dan menguji ide lebih kritis—bukan mesin instan penyelesai tugas.
+          Mahakarya dari gagasan ini adalah membangun ekosistem pendidikan yang membuat AI berfungsi sebagai
+          <b>alat latihan berpikir</b>: membantu mahasiswa bertanya lebih tajam, menalar lebih runtut, menguji ide lebih kritis —
+          bukan menjadi mesin instan untuk menyelesaikan tugas.
         </p>
+
         <div class="divider" aria-hidden="true"></div>
+
         <p class="hl">
-          Target akhirnya: mahasiswa yang <b>mampu berpikir mandiri</b>, <b>mampu mempertanggungjawabkan argumen</b>, dan tetap punya
-          <b>integritas serta identitas intelektual</b> di era AI.
+          Hasil akhirnya bukan sekadar mahasiswa yang “output-nya bagus”, tetapi mahasiswa yang:
         </p>
+
+        <ul class="list" aria-label="Target hasil akhir">
+          <li class="li">
+            <span class="dot" aria-hidden="true"></span>
+            <div><b>Mampu berpikir mandiri</b><span>Tidak panik saat tanpa AI, dan tetap bisa memulai dari nol.</span></div>
+          </li>
+          <li class="li">
+            <span class="dot" aria-hidden="true"></span>
+            <div><b>Mampu mempertanggungjawabkan argumen</b><span>Menjelaskan ide dengan kata sendiri, menjawab kritik, dan membela posisi.</span></div>
+          </li>
+          <li class="li">
+            <span class="dot" aria-hidden="true"></span>
+            <div><b>Punya integritas & identitas intelektual</b><span>Menghasilkan karya yang merepresentasikan pemahaman, bukan sekadar hasil mesin.</span></div>
+          </li>
+        </ul>
 
         <div class="cta-row" style="margin-top:16px">
           <a class="btn primary" href="#top">Kembali ke Atas ↑</a>
-          <a class="btn" href="#kontak">Kontak / CTA</a>
+          <a class="btn" href="#kontak">Unduh / Hubungi</a>
         </div>
       </article>
     </section>
 
-    <section id="kontak" class="grid" aria-label="Bagian penutup dan ajakan">
+    <!-- CTA -->
+    <section id="kontak" class="grid" aria-label="CTA penutup">
       <article class="card full">
-        <p class="kicker">Ajakan</p>
-        <h2>Ingin versi untuk makalah, slide, atau landing page?</h2>
+        <p class="kicker">Penutup</p>
+        <h2>Ingin mengembangkan ini jadi makalah, slide, atau proposal kampus?</h2>
         <p>
-          Kamu bisa mengadaptasi teks ini menjadi artikel, presentasi, atau proposal kebijakan kampus.
-          Tambahkan studi kasus, indikator asesmen, dan pedoman penggunaan AI sesuai kebutuhan.
+          Kamu bisa menambahkan studi kasus, indikator observasi, dan rancangan tugas berbasis proses. Kalau mau, aku juga
+          bisa bantu membuat versi <b>presentasi</b>, <b>artikel formal</b>, atau <b>kerangka kebijakan kampus</b>.
         </p>
         <div class="cta-row">
           <a class="btn primary" href="#" onclick="alert('Ganti link ini ke WhatsApp/Email kamu.'); return false;">Hubungi Saya</a>
           <a class="btn" href="#" onclick="alert('Ganti link ini ke file PDF/Drive kamu.'); return false;">Unduh Ringkasan</a>
         </div>
         <p class="small" style="margin-top:10px">
-          Tip: kalau mau lebih “akademik”, tambahkan definisi operasional ketergantungan, instrumen observasi, dan rancangan asesmen berbasis proses.
+          Tip: Tambahkan “AI disclosure statement” (bagian mana dibantu AI) agar penggunaan AI transparan dan bertanggung jawab.
         </p>
       </article>
     </section>
 
     <footer class="footer" aria-label="Footer">
-      <div class="wrap" style="padding:0">
-        <div class="small">
-          © <span id="year"></span> • AI & Ketergantungan Mahasiswa • Dibuat untuk edukasi dan refleksi
-        </div>
+      <div class="small">
+        © <span id="year"></span> • AI & Ketergantungan Mahasiswa • Dibuat untuk edukasi & refleksi
       </div>
     </footer>
   </main>
