@@ -1,652 +1,638 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Ruang refleksi tentang AI dan Ketergantungan Mahasiswa — fenomena yang tampak wajar, tapi mengubah cara kita belajar. Lengkap dengan pola, dampak, peran, dan prinsip sehat." />
+  <title>AI & Ketergantungan Mahasiswa</title>
 
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+  <style>
+    :root{
+      --bg:#0b1020;
+      --panel:#0f1730;
+      --card:#111a33;
+      --muted:#9fb0d0;
+      --text:#eaf0ff;
+      --line:rgba(255,255,255,.10);
+      --accent:#7aa7ff;
+      --accent2:#7bffc8;
+      --shadow: 0 18px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --max: 1080px;
+    }
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(1000px 520px at 15% 5%, rgba(122,167,255,.28), transparent 60%),
+        radial-gradient(900px 520px at 85% 10%, rgba(123,255,200,.18), transparent 55%),
+        radial-gradient(800px 600px at 50% 100%, rgba(122,167,255,.10), transparent 55%),
+        var(--bg);
+      line-height:1.7;
+    }
 
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px}
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:16px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800; letter-spacing:.2px;
+      white-space:nowrap;
+    }
+    .logo{
+      width:34px; height:34px; border-radius:12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 10px 30px rgba(122,167,255,.25);
+      flex:0 0 auto;
+    }
+    .menu{
+      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
+      opacity:.98;
+    }
+    .menu a{
+      padding:8px 10px;
+      border-radius:12px;
+      border:1px solid transparent;
+      color:var(--muted);
+      font-weight:650;
+      font-size:14px;
+    }
+    .menu a:hover{
+      border-color:var(--line);
+      color:var(--text);
+      background:rgba(255,255,255,.03)
+    }
 
-<title>6&nbsp; UAS-1 My Concepts – Armein Z. R. Langi</title>
-<style>
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-ul.task-list{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
-  vertical-align: middle;
-}
-</style>
+    /* HERO */
+    .hero{
+      margin-top:12px;
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border-radius: calc(var(--radius) + 6px);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .hero::after{
+      content:"";
+      position:absolute; inset:-140px -140px auto auto;
+      width:280px; height:280px;
+      background: radial-gradient(circle at 30% 30%, rgba(123,255,200,.22), transparent 60%);
+      filter: blur(0px);
+      pointer-events:none;
+    }
+    .hero-inner{
+      padding:44px 26px;
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:22px;
+      align-items:center;
+      position:relative;
+      z-index:1;
+    }
+    .pill{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      font-size: 14px;
+      width:fit-content;
+    }
+    .pill span{
+      display:inline-block;
+      width:8px; height:8px; border-radius:99px;
+      background: var(--accent2);
+      box-shadow: 0 0 0 6px rgba(123,255,200,.08);
+    }
+    h1{
+      margin:12px 0 10px;
+      font-size: clamp(28px, 3.2vw, 46px);
+      line-height:1.08;
+      letter-spacing:-.9px;
+    }
+    .lead{
+      color:var(--muted);
+      font-size: 16.6px;
+      margin:0 0 18px
+    }
+    .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+      font-weight:750;
+      font-size:14.5px;
+    }
+    .btn:hover{background: rgba(255,255,255,.06)}
+    .btn.primary{
+      border-color: rgba(122,167,255,.55);
+      background: linear-gradient(135deg, rgba(122,167,255,.25), rgba(123,255,200,.10));
+    }
+    .btn.primary:hover{
+      border-color: rgba(122,167,255,.75);
+      background: linear-gradient(135deg, rgba(122,167,255,.32), rgba(123,255,200,.14));
+    }
 
+    .hero-card{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(17,26,51,.55);
+      padding:18px;
+    }
+    .hero-card h3{margin:0 0 6px; font-size: 16px; letter-spacing:-.2px}
+    .hero-card p{margin:0; color:var(--muted); font-size: 14.6px}
+    .stat-grid{display:grid; gap:10px; margin-top:12px}
+    .stat{
+      display:flex; justify-content:space-between; align-items:center;
+      padding:10px 12px;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      font-size:14px;
+    }
+    .stat b{color:var(--text)}
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../My_Opinions/index.html" rel="next">
-<link href="../My_Personal_Reviews/index.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-364982630eef5352dd1537128a8ed5cb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
-  "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
-  }
-}</script>
+    /* CONTENT */
+    main{margin-top:26px}
+    section{margin:22px 0}
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:14px;
+    }
+    .card{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      border-radius: var(--radius);
+      padding:18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.20);
+    }
+    .card h2, .card h3{margin:0 0 10px}
+    .card h2{font-size:22px; letter-spacing:-.3px}
+    .card h3{font-size:18px; letter-spacing:-.2px}
+    .card p{margin:0; color:var(--muted)}
+    .kicker{color: var(--muted); font-size: 13.5px; margin:0 0 8px}
+    .hl{color:var(--text)}
+    .divider{height:1px; background:var(--line); margin:14px 0}
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:7px 10px;
+      border-radius: 999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      font-size: 13.5px;
+      width:fit-content;
+    }
+    .badge i{
+      width:10px; height:10px; border-radius:99px;
+      background: var(--accent2);
+      box-shadow: 0 0 0 6px rgba(123,255,200,.08);
+      display:inline-block;
+    }
 
+    .quote{
+      padding:16px 16px;
+      border-radius: var(--radius);
+      border:1px dashed rgba(255,255,255,.14);
+      background: rgba(255,255,255,.02);
+      color: var(--muted);
+      margin-top:12px;
+      font-size: 15.2px;
+    }
+    .quote b{color:var(--text)}
+    .list{
+      margin:12px 0 0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:10px;
+    }
+    .li{
+      display:flex; gap:10px;
+      padding:12px 12px;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: rgba(17,26,51,.42);
+    }
+    .dot{
+      width:12px; height:12px; border-radius:99px;
+      background: var(--accent);
+      margin-top:6px;
+      box-shadow: 0 0 0 6px rgba(122,167,255,.08);
+      flex: 0 0 auto;
+    }
+    .li b{display:block; margin-bottom:2px; color:var(--text)}
+    .li span{color:var(--muted); font-size: 14.6px}
 
+    .two-col{grid-column: span 6}
+    .three-col{grid-column: span 4}
+    .full{grid-column: 1 / -1}
+
+    details{
+      margin-top:14px;
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:14px 14px;
+      background: rgba(17,26,51,.42);
+    }
+    summary{
+      cursor:pointer;
+      font-weight:800;
+      color:var(--text);
+      list-style:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    summary::-webkit-details-marker{display:none}
+    details p{margin:10px 0 0; color:var(--muted)}
+    .chev{opacity:.75}
+
+    .roleGrid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:14px;
+    }
+
+    .tipsGrid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:14px;
+      margin-top:10px;
+    }
+    .tip{
+      grid-column: span 6;
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:14px;
+      background: rgba(17,26,51,.42);
+    }
+    .tip h4{margin:0 0 6px; font-size:15.5px}
+    .tip p{margin:0; color:var(--muted)}
+
+    .footer{
+      margin-top:28px;
+      padding:20px 0 40px;
+      color:var(--muted);
+      border-top:1px solid var(--line);
+    }
+    .small{font-size: 13.5px}
+
+    @media (max-width: 860px){
+      .hero-inner{grid-template-columns:1fr}
+      .two-col, .three-col{grid-column: 1 / -1}
+      .tip{grid-column: 1 / -1}
+      .menu{display:none}
+    }
+  </style>
 </head>
 
-<body class="nav-sidebar floating quarto-light">
-
-<div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../My_Concepts/index.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">UAS-1 My Concepts</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
-<!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="../">Armein Z. R. Langi</a> 
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Selamat Berjumpa</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../All_About_me/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">UTS-1 All About Me</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../My_Song_for_You/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">UTS-2 My Songs for You</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../My_Stories_for_You/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">UTS-3 My Stories for You</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../My_Shapes/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">UTS-4 My SHAPE (Spiritual Gifts, Heart, Abilities, Personality, Experiences)</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../My_Personal_Reviews/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">UTS-5 My Personal Reviews</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../My_Concepts/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">UAS-1 My Concepts</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../My_Opinions/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">UAS-2 My Opinions</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../My_Innovations/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">UAS-3 My Innovations</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../My_Knowledge/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">UAS-4 My Knowledge</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../My_Professional_Reviews/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">UAS-5 My Professional Reviews</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
-<!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">UAS-1 My Concepts</span></h1>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p><strong>Mahakarya Kolektif: Menyelaraskan Hati, Pikiran, dan Tenaga 8 Miliar Manusia</strong></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../images/TISE.png" class="img-fluid figure-img"></p>
-<figcaption>TISE</figcaption>
-</figure>
-</div>
-<p>Konsep saya tentang “Mahakarya Rekayasa” melampaui artefak teknis belaka; ia adalah sebuah sistem sosio-teknis yang dirancang untuk pemberdayaan kolektif. “Masalah terbesar umat manusia”—kemiskinan, konflik, degradasi lingkungan—pada intinya adalah krisis koordinasi dan krisis makna. Untuk mengerahkan 8 miliar penduduk bumi, kita harus terlebih dahulu memahami dan menyelaraskan tiga komponen fundamental dari kecerdasan kolektif kita. Arsitektur konseptual ini saya sebut sebagai <strong>Triune Intelligence (Kecerdasan Tripartit)</strong>.<sup>3</sup></p>
-<ol type="1">
-<li><p><strong>Hati (Kecerdasan Manusia / <em>Homocordium</em>):</strong> Ini adalah <strong>Axiological Intelligence (AQ)</strong> kolektif kita.<sup>2</sup> “Hati”, yang berasal dari <em>Homo</em> (manusia) dan <em>Cor</em> (hati) <sup>3</sup>, adalah kompas nilai dan moral, “mengapa” di balik semua tindakan kita. Ia adalah sumber empati, etika, dan tujuan yang mendefinisikan “masalah terbesar” apa yang <em>layak</em> untuk dipecahkan. Tanpa “hati” yang selaras, “mahakarya” apa pun akan menjadi optimasi tanpa jiwa. Kunci untuk pemberdayaan kolektif terletak pada <strong>Komunikasi Interpersonal dan Publik</strong>, yang merupakan proses di mana kita menyelaraskan <em>Homocordium</em> kita.</p></li>
-<li><p><strong>Pikiran (Kecerdasan Buatan / <em>Homodeus</em>):</strong> Ini adalah <strong>Synergistic Practical Intelligence (PI-A)</strong> <sup>2</sup>, simbiosis manusia-AI. “Pikiran” adalah “bagaimana” teknisnya. Artificial Intelligence, seperti yang disarankan dalam petunjuk, adalah fasilitator <em>par excellence</em>. Ia mampu menerjemahkan miliaran bahasa secara <em>real-time</em> dan mengelola data dalam skala yang tak terbayangkan. Namun, AI hanyalah “Instrumen Cerdas” atau “Juru Tulis Cerdas” <sup>1</sup>; manusialah yang harus menggunakan <strong>PI-A</strong> untuk <em>mengarahkan</em> AI, menerapkan penalaran logis, dan mengorkestrasi alur kerja yang kompleks untuk memecahkan masalah.</p></li>
-<li><p><strong>Tenaga (Kecerdasan Alam / <em>Natural Intelligence</em>):</strong> Ini adalah “apa” yang kita gunakan—energi dan materi fundamental alam semesta.<sup>3</sup> “Tenaga” 8 miliar manusia adalah “Human Energon” (waktu, fokus, kreativitas) <sup>5</sup>; “tenaga” planet adalah “Environmental Energon”.<sup>3</sup> Mahakarya Rekayasa harus ditenagai oleh <strong>CORE Engine</strong> <sup>5</sup>, sebuah mesin konseptual yang mengelola “tenaga” ini secara holistik melalui <strong>PSKVE Engine</strong> (Product, Service, Knowledge, Value, Environmental).<sup>3</sup> Ini memastikan bahwa solusi kita berkelanjutan dan tidak menciptakan krisis baru dengan mengorbankan satu dimensi (misalnya Lingkungan) untuk dimensi lain (misalnya Nilai/Value).</p></li>
-</ol>
-<p>Oleh karena itu, Mahakarya Rekayasa Sistem dan TI di era AI bukanlah AI super yang memecahkan masalah <em>untuk</em> kita. Mahakarya itu adalah <strong>sistem TISE global</strong> yang berfungsi sebagai platform Komunikasi Publik, yang memungkinkan 8 miliar “Protagonis-Penulis” <sup>1</sup> untuk menyelaraskan Hati (AQ) mereka, memperkuat Pikiran (PI-A) mereka, dan mengelola Tenaga (PSKVE) mereka secara bijaksana untuk berkolaborasi dalam ko-kreasi narasi kolektif umat manusia.</p>
-
-
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
-    const isCodeAnnotation = (el) => {
-      for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
-          return true;
-        }
-      }
-      return false;
-    }
-    const onCopySuccess = function(e) {
-      // button target
-      const button = e.trigger;
-      // don't keep focus
-      button.blur();
-      // flash "checked"
-      button.classList.add('code-copy-button-checked');
-      var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
-      let tooltip;
-      if (window.bootstrap) {
-        button.setAttribute("data-bs-toggle", "tooltip");
-        button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
-            customClass: "code-copy-button-tooltip",
-            offset: [0, -8]});
-        tooltip.show();    
-      }
-      setTimeout(function() {
-        if (tooltip) {
-          tooltip.hide();
-          button.removeAttribute("data-bs-title");
-          button.removeAttribute("data-bs-toggle");
-          button.removeAttribute("data-bs-placement");
-        }
-        button.setAttribute("title", currentTitle);
-        button.classList.remove('code-copy-button-checked');
-      }, 1000);
-      // clear code selection
-      e.clearSelection();
-    }
-    const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
-        }
-        return codeEl.innerText;
-    }
-    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-      text: getTextToCopy
-    });
-    clipboard.on('success', onCopySuccess);
-    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-        text: getTextToCopy,
-        container: window.document.getElementById('quarto-embedded-source-code-modal')
-      });
-      clipboardModal.on('success', onCopySuccess);
-    }
-      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
-      var isInternal = (href) => {
-          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-      }
-      // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-      for (var i=0; i<links.length; i++) {
-        const link = links[i];
-        if (!isInternal(link.href)) {
-          // undo the damage that might have been done by quarto-nav.js in the case of
-          // links that we want to consider external
-          if (link.dataset.originalHref !== undefined) {
-            link.href = link.dataset.originalHref;
-          }
-        }
-      }
-    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-      const config = {
-        allowHTML: true,
-        maxWidth: 500,
-        delay: 100,
-        arrow: false,
-        appendTo: function(el) {
-            return el.parentElement;
-        },
-        interactive: true,
-        interactiveBorder: 10,
-        theme: 'quarto',
-        placement: 'bottom-start',
-      };
-      if (contentFn) {
-        config.content = contentFn;
-      }
-      if (onTriggerFn) {
-        config.onTrigger = onTriggerFn;
-      }
-      if (onUntriggerFn) {
-        config.onUntrigger = onUntriggerFn;
-      }
-      window.tippy(el, config); 
-    }
-    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-    for (var i=0; i<noterefs.length; i++) {
-      const ref = noterefs[i];
-      tippyHover(ref, function() {
-        // use id or data attribute instead here
-        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-        try { href = new URL(href).hash; } catch {}
-        const id = href.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note) {
-          return note.innerHTML;
-        } else {
-          return "";
-        }
-      });
-    }
-    const xrefs = window.document.querySelectorAll('a.quarto-xref');
-    const processXRef = (id, note) => {
-      // Strip column container classes
-      const stripColumnClz = (el) => {
-        el.classList.remove("page-full", "page-columns");
-        if (el.children) {
-          for (const child of el.children) {
-            stripColumnClz(child);
-          }
-        }
-      }
-      stripColumnClz(note)
-      if (id === null || id.startsWith('sec-')) {
-        // Special case sections, only their first couple elements
-        const container = document.createElement("div");
-        if (note.children && note.children.length > 2) {
-          container.appendChild(note.children[0].cloneNode(true));
-          for (let i = 1; i < note.children.length; i++) {
-            const child = note.children[i];
-            if (child.tagName === "P" && child.innerText === "") {
-              continue;
-            } else {
-              container.appendChild(child.cloneNode(true));
-              break;
-            }
-          }
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(container);
-          }
-          return container.innerHTML
-        } else {
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(note);
-          }
-          return note.innerHTML;
-        }
-      } else {
-        // Remove any anchor links if they are present
-        const anchorLink = note.querySelector('a.anchorjs-link');
-        if (anchorLink) {
-          anchorLink.remove();
-        }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
-        if (note.classList.contains("callout")) {
-          return note.outerHTML;
-        } else {
-          return note.innerHTML;
-        }
-      }
-    }
-    for (var i=0; i<xrefs.length; i++) {
-      const xref = xrefs[i];
-      tippyHover(xref, undefined, function(instance) {
-        instance.disable();
-        let url = xref.getAttribute('href');
-        let hash = undefined; 
-        if (url.startsWith('#')) {
-          hash = url;
-        } else {
-          try { hash = new URL(url).hash; } catch {}
-        }
-        if (hash) {
-          const id = hash.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          if (note !== null) {
-            try {
-              const html = processXRef(id, note.cloneNode(true));
-              instance.setContent(html);
-            } finally {
-              instance.enable();
-              instance.show();
-            }
-          } else {
-            // See if we can fetch this
-            fetch(url.split('#')[0])
-            .then(res => res.text())
-            .then(html => {
-              const parser = new DOMParser();
-              const htmlDoc = parser.parseFromString(html, "text/html");
-              const note = htmlDoc.getElementById(id);
-              if (note !== null) {
-                const html = processXRef(id, note);
-                instance.setContent(html);
-              } 
-            }).finally(() => {
-              instance.enable();
-              instance.show();
-            });
-          }
-        } else {
-          // See if we can fetch a full url (with no hash to target)
-          // This is a special case and we should probably do some content thinning / targeting
-          fetch(url)
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.querySelector('main.content');
-            if (note !== null) {
-              // This should only happen for chapter cross references
-              // (since there is no id in the URL)
-              // remove the first header
-              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-                note.children[0].remove();
-              }
-              const html = processXRef(null, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
-          });
-        }
-      }, function(instance) {
-      });
-    }
-        let selectedAnnoteEl;
-        const selectorForAnnotation = ( cell, annotation) => {
-          let cellAttr = 'data-code-cell="' + cell + '"';
-          let lineAttr = 'data-code-annotation="' +  annotation + '"';
-          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-          return selector;
-        }
-        const selectCodeLines = (annoteEl) => {
-          const doc = window.document;
-          const targetCell = annoteEl.getAttribute("data-target-cell");
-          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-          const lineIds = lines.map((line) => {
-            return targetCell + "-" + line;
-          })
-          let top = null;
-          let height = null;
-          let parent = null;
-          if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
-            }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
-            }
-            selectedAnnoteEl = annoteEl;
-          }
-        };
-        const unselectCodeLines = () => {
-          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-          elementsIds.forEach((elId) => {
-            const div = window.document.getElementById(elId);
-            if (div) {
-              div.remove();
-            }
-          });
-          selectedAnnoteEl = undefined;
-        };
-          // Handle positioning of the toggle
-      window.addEventListener(
-        "resize",
-        throttle(() => {
-          elRect = undefined;
-          if (selectedAnnoteEl) {
-            selectCodeLines(selectedAnnoteEl);
-          }
-        }, 10)
-      );
-      function throttle(fn, ms) {
-      let throttle = false;
-      let timer;
-        return (...args) => {
-          if(!throttle) { // first call gets through
-              fn.apply(this, args);
-              throttle = true;
-          } else { // all the others get throttled
-              if(timer) clearTimeout(timer); // cancel #2
-              timer = setTimeout(() => {
-                fn.apply(this, args);
-                timer = throttle = false;
-              }, ms);
-          }
-        };
-      }
-        // Attach click handler to the DT
-        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-        for (const annoteDlNode of annoteDls) {
-          annoteDlNode.addEventListener('click', (event) => {
-            const clickedEl = event.target;
-            if (clickedEl !== selectedAnnoteEl) {
-              unselectCodeLines();
-              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-              if (activeEl) {
-                activeEl.classList.remove('code-annotation-active');
-              }
-              selectCodeLines(clickedEl);
-              clickedEl.classList.add('code-annotation-active');
-            } else {
-              // Unselect the line
-              unselectCodeLines();
-              clickedEl.classList.remove('code-annotation-active');
-            }
-          });
-        }
-    const findCites = (el) => {
-      const parentEl = el.parentElement;
-      if (parentEl) {
-        const cites = parentEl.dataset.cites;
-        if (cites) {
-          return {
-            el,
-            cites: cites.split(' ')
-          };
-        } else {
-          return findCites(el.parentElement)
-        }
-      } else {
-        return undefined;
-      }
-    };
-    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-    for (var i=0; i<bibliorefs.length; i++) {
-      const ref = bibliorefs[i];
-      const citeInfo = findCites(ref);
-      if (citeInfo) {
-        tippyHover(citeInfo.el, function() {
-          var popup = window.document.createElement('div');
-          citeInfo.cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
-          });
-          return popup.innerHTML;
-        });
-      }
-    }
-  });
-  </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../My_Personal_Reviews/index.html" class="pagination-link" aria-label="UTS-5 My Personal Reviews">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">UTS-5 My Personal Reviews</span></span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../My_Opinions/index.html" class="pagination-link" aria-label="UAS-2 My Opinions">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">UAS-2 My Opinions</span></span> <i class="bi bi-arrow-right-short"></i>
+<body>
+  <header class="wrap">
+    <nav class="nav" aria-label="Navigasi utama">
+      <a class="brand" href="#top" aria-label="Kembali ke atas">
+        <span class="logo" aria-hidden="true"></span>
+        <span>AI & Ketergantungan Mahasiswa</span>
       </a>
-  </div>
-</nav>
-</div> <!-- /content -->
 
+      <div class="menu" role="navigation" aria-label="Menu">
+        <a href="#intro">Intro</a>
+        <a href="#kenapa-penting">Kenapa Penting</a>
+        <a href="#pola">Pola</a>
+        <a href="#dampak">Dampak</a>
+        <a href="#peran">Peran</a>
+        <a href="#prinsip-sehat">Prinsip Sehat</a>
+        <a href="#mahakarya">Mahakarya</a>
+      </div>
+    </nav>
 
+    <section id="top" class="hero" aria-label="Bagian pembuka">
+      <div class="hero-inner">
+        <div>
+          <div class="pill"><span aria-hidden="true"></span>Halo! 👋 Selamat datang</div>
+          <h1>Ketika “bantuan” pelan-pelan mengambil alih cara berpikir.</h1>
+          <p class="lead">
+            Ruang refleksi tentang <b>AI dan Ketergantungan Mahasiswa</b> — fenomena yang tampak wajar,
+            namun diam-diam menggeser belajar dari <b>proses</b> menjadi <b>hasil instan</b>.
+          </p>
 
+          <div class="cta-row">
+            <a class="btn primary" href="#intro">Mulai Baca <span aria-hidden="true">→</span></a>
+            <a class="btn" href="#mahakarya">Lihat Inti Mahakarya</a>
+          </div>
+        </div>
 
-</body></html>
+        <aside class="hero-card" aria-label="Ringkasan cepat">
+          <h3>Ringkasan cepat</h3>
+          <p>
+            Masalahnya bukan AI dipakai atau dilarang. Masalahnya adalah saat AI menggantikan latihan berpikir.
+            Kuncinya: menjadikan AI <b>pelatih kognitif</b>, bukan <b>pengganti intelektual</b>.
+          </p>
+          <div class="stat-grid" aria-label="Sorotan">
+            <div class="stat"><span>Fokus</span><b>Proses belajar</b></div>
+            <div class="stat"><span>Risiko</span><b>Delegasi kognitif</b></div>
+            <div class="stat"><span>Arah sehat</span><b>AI sebagai pelatih</b></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </header>
+
+  <main class="wrap">
+    <!-- INTRO -->
+    <section id="intro" class="grid" aria-label="Intro">
+      <article class="card full">
+        <p class="kicker">Intro</p>
+        <h2>Selamat datang di ruang refleksi.</h2>
+        <p>
+          AI di kampus awalnya hadir sebagai penolong: membantu menjelaskan konsep, merapikan tulisan, memberi contoh,
+          sampai mencarikan referensi. Tapi di balik kemudahan itu, ada pertanyaan yang perlu kita berani ajukan:
+        </p>
+
+        <div class="quote">
+          <b>Apakah AI sedang membantu mahasiswa belajar… atau justru mengambil alih cara berpikirnya?</b>
+        </div>
+
+        <div class="divider" aria-hidden="true"></div>
+
+        <p>
+          Di sini, kita membahas bagaimana ketergantungan itu terbentuk, dampaknya yang sering tidak terlihat,
+          serta bagaimana AI seharusnya ditempatkan sebagai <b>pelatih kognitif</b>, bukan pengganti kerja intelektual.
+        </p>
+
+        <div class="divider" aria-hidden="true"></div>
+        <span class="badge"><i aria-hidden="true"></i> Fokus: belajar tetap manusiawi & bertanggung jawab</span>
+      </article>
+    </section>
+
+    <!-- WHY IMPORTANT -->
+    <section id="kenapa-penting" class="grid" aria-label="Kenapa penting">
+      <article class="card two-col">
+        <p class="kicker">Kenapa Ini Penting?</p>
+        <h2>Pendidikan bukan pabrik teks.</h2>
+        <p>
+          Pendidikan adalah proses membentuk kemampuan: <b>menalar</b>, <b>menyusun argumen</b>, <b>memecahkan masalah</b>,
+          dan <b>bertanggung jawab atas ide sendiri</b>.
+        </p>
+        <div class="divider" aria-hidden="true"></div>
+        <p>
+          Kalau AI membuat mahasiswa semakin cepat “selesai”, tetapi semakin jarang “berproses”,
+          maka yang terjadi bukan kemajuan — melainkan <b>delegasi kognitif</b>:
+          kemampuan berpikir dipinjamkan ke mesin, lalu perlahan melemah.
+        </p>
+      </article>
+
+      <article class="card two-col">
+        <p class="kicker">Yang sering terlihat vs yang sebenarnya</p>
+        <ul class="list" aria-label="Perbandingan dampak">
+          <li class="li">
+            <span class="dot" aria-hidden="true"></span>
+            <div>
+              <b>Kelihatan:</b>
+              <span>tugas cepat selesai, tulisan rapi, presentasi “aman”.</span>
+            </div>
+          </li>
+          <li class="li">
+            <span class="dot" aria-hidden="true"></span>
+            <div>
+              <b>Sebenarnya:</b>
+              <span>kemampuan memulai, menalar, dan membela argumen jadi lebih rapuh.</span>
+            </div>
+          </li>
+          <li class="li">
+            <span class="dot" aria-hidden="true"></span>
+            <div>
+              <b>Efek jangka panjang:</b>
+              <span>sulit menghadapi masalah baru tanpa “ditolong AI”.</span>
+            </div>
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- PATTERNS -->
+    <section id="pola" class="grid" aria-label="Pola ketergantungan">
+      <article class="card full">
+        <p class="kicker">Pola Ketergantungan</p>
+        <h2>Ketergantungan tidak datang tiba-tiba. Ia tumbuh jadi kebiasaan.</h2>
+        <p>
+          Ketergantungan sering muncul dari hal kecil yang diulang: dari “sekadar minta contoh” menjadi “tidak bisa mulai tanpa AI”.
+          Ini empat pola yang paling sering terjadi:
+        </p>
+
+        <ul class="list" style="margin-top:14px" aria-label="Daftar pola ketergantungan">
+          <li class="li">
+            <span class="dot" aria-hidden="true"></span>
+            <div>
+              <b>Ketergantungan Ide</b>
+              <span>Sulit memulai tanpa “dipancing” AI. Kertas kosong terasa menakutkan.</span>
+            </div>
+          </li>
+          <li class="li">
+            <span class="dot" aria-hidden="true"></span>
+            <div>
+              <b>Ketergantungan Struktur</b>
+              <span>AI menentukan alur berpikir; mahasiswa tinggal mengisi tanpa membangun kerangka sendiri.</span>
+            </div>
+          </li>
+          <li class="li">
+            <span class="dot" aria-hidden="true"></span>
+            <div>
+              <b>Ketergantungan Bahasa</b>
+              <span>Tulisan rapi, tapi gagap menjelaskan dengan kata sendiri. Pengetahuan belum “menjadi milik”.</span>
+            </div>
+          </li>
+          <li class="li">
+            <span class="dot" aria-hidden="true"></span>
+            <div>
+              <b>Ketergantungan Keputusan</b>
+              <span>AI dipakai memilih pendapat; latihan menilai dan mengambil posisi sendiri melemah.</span>
+            </div>
+          </li>
+        </ul>
+
+        <details>
+          <summary>
+            Contoh situasi nyata di kampus
+            <span class="chev" aria-hidden="true">▾</span>
+          </summary>
+          <p><b>Contoh 1:</b> Esai 5 halaman selesai cepat, tapi saat ditanya argumen utama, jawabannya mengambang.</p>
+          <p><b>Contoh 2:</b> Bisa mengutip definisi, tapi sulit memberi contoh dari konteks lokal atau pengalaman.</p>
+          <p><b>Contoh 3:</b> Presentasi lancar, namun tidak mampu menjawab pertanyaan kritis karena tidak memahami struktur gagasan.</p>
+        </details>
+      </article>
+    </section>
+
+    <!-- IMPACT -->
+    <section id="dampak" class="grid" aria-label="Dampak">
+      <article class="card full">
+        <p class="kicker">Dampak</p>
+        <h2>Nilai bisa naik, tetapi fondasi bisa rapuh.</h2>
+        <p class="hl">
+          Ketergantungan AI tidak selalu menurunkan nilai—justru kadang menaikkan performa terlihat.
+          Yang terkikis adalah kemampuan yang tidak langsung terlihat.
+        </p>
+
+        <ul class="list" aria-label="Daftar dampak ketergantungan">
+          <li class="li">
+            <span class="dot" aria-hidden="true"></span>
+            <div><b>Berpikir kritis melemah</b><span>Otot nalar jarang dipakai; refleks menerima hasil instan.</span></div>
+          </li>
+          <li class="li">
+            <span class="dot" aria-hidden="true"></span>
+            <div><b>Daya tahan belajar turun</b><span>Sedikit sulit → langsung cari jalan pintas.</span></div>
+          </li>
+          <li class="li">
+            <span class="dot" aria-hidden="true"></span>
+            <div><b>Keaslian intelektual memudar</b><span>Ide terasa bukan milik sendiri; identitas akademik melemah.</span></div>
+          </li>
+          <li class="li">
+            <span class="dot" aria-hidden="true"></span>
+            <div><b>Percaya diri akademik palsu</b><span>Yakin pada hasil, bukan pada kemampuan menjelaskan & mempertanggungjawabkan.</span></div>
+          </li>
+        </ul>
+
+        <details>
+          <summary>
+            Tanda-tanda ketergantungan (cek diri sendiri)
+            <span class="chev" aria-hidden="true">▾</span>
+          </summary>
+          <p>• Tidak bisa menulis 1 paragraf tanpa AI.</p>
+          <p>• Tidak bisa menjelaskan tulisan sendiri dalam 1 menit.</p>
+          <p>• Jarang membaca sumber asli karena merasa ringkasan sudah cukup.</p>
+          <p>• Merasa “kosong” saat diminta berpendapat tanpa bantuan.</p>
+        </details>
+      </article>
+    </section>
+
+    <!-- ROLES -->
+    <section id="peran" class="grid" aria-label="Peran kunci">
+      <article class="card full">
+        <p class="kicker">Peran Kunci</p>
+        <h2>Ini masalah sistemik: perlu kerja bareng.</h2>
+        <p>
+          Ketergantungan AI bukan hanya urusan individu. Ia dipengaruhi desain tugas, kultur akademik, dan aturan kampus.
+          Empat aktor ini punya peran penting:
+        </p>
+      </article>
+
+      <article class="card three-col">
+        <p class="kicker">1) AI</p>
+        <h3>Akselerator ↔ Pengganti</h3>
+        <p>
+          AI mempercepat akses dan pemahaman, tetapi menjadi substitutor berpikir saat menggantikan analisis, argumen, dan keputusan.
+        </p>
+      </article>
+
+      <article class="card three-col">
+        <p class="kicker">2) Mahasiswa</p>
+        <h3>Pemilik ide</h3>
+        <p>
+          Mahasiswa harus tetap jadi pemilik gagasan. AI boleh membantu latihan, tetapi posisi dan pemahaman tetap lahir dari diri sendiri.
+        </p>
+      </article>
+
+      <article class="card three-col">
+        <p class="kicker">3) Dosen</p>
+        <h3>Penjaga proses</h3>
+        <p>
+          Dosen menilai proses, meminta pertanggungjawaban ide, dan mendesain asesmen yang memunculkan nalar—bukan hanya teks rapi.
+        </p>
+      </article>
+
+      <article class="card three-col">
+        <p class="kicker">4) Kampus</p>
+        <h3>Budaya & sistem</h3>
+        <p>
+          Kampus membangun pedoman yang jelas: AI boleh, transparan, bertanggung jawab, dan penilaian menguji pemahaman.
+        </p>
+      </article>
+    </section>
+
+    <!-- HEALTHY PRINCIPLES -->
+    <section id="prinsip-sehat" class="grid" aria-label="Prinsip sehat">
+      <article class="card full">
+        <p class="kicker">Prinsip Sehat</p>
+        <h2>AI sebagai pelatih, bukan pengganti.</h2>
+        <p>
+          Arah penggunaan AI perlu diubah: dari “menyelesaikan” menjadi “melatih”.
+          Berikut beberapa kebiasaan yang bisa langsung dipakai:
+        </p>
+
+        <div class="tipsGrid" aria-label="Tips penggunaan AI yang sehat">
+          <div class="tip">
+            <h4>✅ Gunakan AI untuk bertanya balik</h4>
+            <p>Minta AI mengkritik argumenmu, menunjukkan kelemahan, dan memintamu membuktikan klaim.</p>
+          </div>
+          <div class="tip">
+            <h4>✅ Minta opsi, lalu kamu memilih dan membela</h4>
+            <p>AI memberi alternatif; kamu yang memutuskan alasan dan mempertanggungjawabkannya.</p>
+          </div>
+          <div class="tip">
+            <h4>✅ Jadikan AI alat latihan</h4>
+            <p>Latih diskusi, simulasi ujian lisan, atau merancang outline—bukan menulis final tanpa pemahaman.</p>
+          </div>
+          <div class="tip">
+            <h4>✅ Ada tahap “wajib manusia”</h4>
+            <p>Refleksi, contoh lokal, pengalaman pribadi, dan pembuktian pemahaman dengan kata sendiri.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- MASTERPIECE -->
+    <section id="mahakarya" class="grid" aria-label="Inti mahakarya">
+      <article class="card full">
+        <p class="kicker">✦ Inti Mahakarya</p>
+        <h2>AI seharusnya memperkuat manusia, bukan menggantikannya.</h2>
+        <p>
+          Mahakarya dari gagasan ini adalah membangun ekosistem pendidikan yang menjadikan AI sebagai
+          <b>alat latihan berpikir</b>—membantu mahasiswa bertanya lebih tajam, menalar lebih runtut, dan menguji ide lebih kritis,
+          bukan mesin instan penyelesai tugas.
+        </p>
+
+        <div class="divider" aria-hidden="true"></div>
+
+        <p class="hl">Target akhirnya bukan sekadar output yang bagus, tetapi mahasiswa yang:</p>
+        <ul class="list" aria-label="Target hasil akhir">
+          <li class="li"><span class="dot" aria-hidden="true"></span><div><b>Mampu berpikir mandiri</b><span>Bisa memulai dan menyusun argumen tanpa panik saat tanpa AI.</span></div></li>
+          <li class="li"><span class="dot" aria-hidden="true"></span><div><b>Mampu mempertanggungjawabkan argumen</b><span>Menjelaskan ide dengan kata sendiri dan menjawab kritik dengan tenang.</span></div></li>
+          <li class="li"><span class="dot" aria-hidden="true"></span><div><b>Punya integritas & identitas intelektual</b><span>Karya merepresentasikan pemahaman, bukan sekadar hasil mesin.</span></div></li>
+        </ul>
+
+        <div class="cta-row" style="margin-top:16px">
+          <a class="btn primary" href="#top">Kembali ke Atas ↑</a>
+          <a class="btn" href="#" onclick="alert('Ganti tombol ini dengan link email/WhatsApp/portfolio kamu.'); return false;">Kontak / CTA</a>
+        </div>
+      </article>
+    </section>
+
+    <footer class="footer" aria-label="Footer">
+      <div class="small">
+        © <span id="year"></span> • AI & Ketergantungan Mahasiswa • Dibuat untuk edukasi & refleksi
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
