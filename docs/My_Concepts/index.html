@@ -1,24 +1,25 @@
+```html
 <!doctype html>
 <html lang="id">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Ruang refleksi tentang AI dan Ketergantungan Mahasiswa — fenomena yang tampak wajar, tapi mengubah cara kita belajar. Lengkap dengan pola, dampak, peran, dan prinsip sehat." />
-  <title>AI & Ketergantungan Mahasiswa</title>
+  <meta name="description" content="Blog sederhana: AI & Ketergantungan Mahasiswa — refleksi tentang belajar, proses berpikir, dan peran AI sebagai pelatih kognitif." />
+  <title>AI & Ketergantungan Mahasiswa — Blog</title>
 
   <style>
     :root{
       --bg:#0b1020;
       --panel:#0f1730;
-      --card:#111a33;
-      --muted:#9fb0d0;
+      --card:rgba(255,255,255,.04);
       --text:#eaf0ff;
+      --muted:#9fb0d0;
       --line:rgba(255,255,255,.10);
       --accent:#7aa7ff;
       --accent2:#7bffc8;
+      --max: 860px;
+      --radius: 16px;
       --shadow: 0 18px 50px rgba(0,0,0,.45);
-      --radius: 18px;
-      --max: 1080px;
     }
 
     *{box-sizing:border-box}
@@ -28,23 +29,34 @@
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
       color:var(--text);
       background:
-        radial-gradient(1000px 520px at 15% 5%, rgba(122,167,255,.28), transparent 60%),
+        radial-gradient(1000px 520px at 15% 5%, rgba(122,167,255,.25), transparent 60%),
         radial-gradient(900px 520px at 85% 10%, rgba(123,255,200,.18), transparent 55%),
         radial-gradient(800px 600px at 50% 100%, rgba(122,167,255,.10), transparent 55%),
         var(--bg);
-      line-height:1.7;
+      line-height:1.85;
     }
 
     a{color:inherit; text-decoration:none}
-    .wrap{max-width:var(--max); margin:0 auto; padding:24px}
-    .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:14px 0;
+    a:hover{color:var(--accent2)}
+    .wrap{max-width:var(--max); margin:0 auto; padding:26px 18px 70px}
+
+    /* Top bar */
+    .top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
       gap:16px;
+      padding:12px 0 18px;
+      position:sticky;
+      top:0;
+      background: linear-gradient(180deg, rgba(11,16,32,.92), rgba(11,16,32,.65), rgba(11,16,32,0));
+      backdrop-filter: blur(10px);
+      z-index:10;
     }
     .brand{
       display:flex; align-items:center; gap:10px;
-      font-weight:800; letter-spacing:.2px;
+      font-weight:850;
+      letter-spacing:.2px;
       white-space:nowrap;
     }
     .logo{
@@ -53,145 +65,41 @@
       box-shadow: 0 10px 30px rgba(122,167,255,.25);
       flex:0 0 auto;
     }
-    .menu{
-      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
-      opacity:.98;
-    }
-    .menu a{
-      padding:8px 10px;
-      border-radius:12px;
-      border:1px solid transparent;
-      color:var(--muted);
-      font-weight:650;
+
+    .nav{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
       font-size:14px;
+      font-weight:650;
+      color:var(--muted);
     }
-    .menu a:hover{
+    .nav a{
+      padding:7px 10px;
+      border-radius: 12px;
+      border:1px solid transparent;
+    }
+    .nav a:hover{
       border-color:var(--line);
+      background:rgba(255,255,255,.03);
       color:var(--text);
-      background:rgba(255,255,255,.03)
     }
 
-    /* HERO */
+    /* Blog header */
     .hero{
-      margin-top:12px;
       border:1px solid var(--line);
-      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-      border-radius: calc(var(--radius) + 6px);
+      border-radius: calc(var(--radius) + 4px);
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
       box-shadow: var(--shadow);
-      overflow:hidden;
-      position:relative;
-    }
-    .hero::after{
-      content:"";
-      position:absolute; inset:-140px -140px auto auto;
-      width:280px; height:280px;
-      background: radial-gradient(circle at 30% 30%, rgba(123,255,200,.22), transparent 60%);
-      filter: blur(0px);
-      pointer-events:none;
-    }
-    .hero-inner{
-      padding:44px 26px;
-      display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap:22px;
-      align-items:center;
-      position:relative;
-      z-index:1;
+      padding: 26px 18px;
+      margin-top: 10px;
     }
     .pill{
-      display:inline-flex; gap:8px; align-items:center;
-      padding:8px 12px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      color: var(--muted);
-      font-size: 14px;
-      width:fit-content;
-    }
-    .pill span{
-      display:inline-block;
-      width:8px; height:8px; border-radius:99px;
-      background: var(--accent2);
-      box-shadow: 0 0 0 6px rgba(123,255,200,.08);
-    }
-    h1{
-      margin:12px 0 10px;
-      font-size: clamp(28px, 3.2vw, 46px);
-      line-height:1.08;
-      letter-spacing:-.9px;
-    }
-    .lead{
-      color:var(--muted);
-      font-size: 16.6px;
-      margin:0 0 18px
-    }
-    .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap:10px;
-      padding:12px 14px;
-      border-radius: 14px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      color: var(--text);
-      font-weight:750;
-      font-size:14.5px;
-    }
-    .btn:hover{background: rgba(255,255,255,.06)}
-    .btn.primary{
-      border-color: rgba(122,167,255,.55);
-      background: linear-gradient(135deg, rgba(122,167,255,.25), rgba(123,255,200,.10));
-    }
-    .btn.primary:hover{
-      border-color: rgba(122,167,255,.75);
-      background: linear-gradient(135deg, rgba(122,167,255,.32), rgba(123,255,200,.14));
-    }
-
-    .hero-card{
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(17,26,51,.55);
-      padding:18px;
-    }
-    .hero-card h3{margin:0 0 6px; font-size: 16px; letter-spacing:-.2px}
-    .hero-card p{margin:0; color:var(--muted); font-size: 14.6px}
-    .stat-grid{display:grid; gap:10px; margin-top:12px}
-    .stat{
-      display:flex; justify-content:space-between; align-items:center;
-      padding:10px 12px;
-      border-radius: 14px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      color: var(--muted);
-      font-size:14px;
-    }
-    .stat b{color:var(--text)}
-
-    /* CONTENT */
-    main{margin-top:26px}
-    section{margin:22px 0}
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap:14px;
-    }
-    .card{
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      border-radius: var(--radius);
-      padding:18px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.20);
-    }
-    .card h2, .card h3{margin:0 0 10px}
-    .card h2{font-size:22px; letter-spacing:-.3px}
-    .card h3{font-size:18px; letter-spacing:-.2px}
-    .card p{margin:0; color:var(--muted)}
-    .kicker{color: var(--muted); font-size: 13.5px; margin:0 0 8px}
-    .hl{color:var(--text)}
-    .divider{height:1px; background:var(--line); margin:14px 0}
-    .badge{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:7px 10px;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 11px;
       border-radius: 999px;
       border:1px solid var(--line);
       background: rgba(255,255,255,.03);
@@ -199,440 +107,308 @@
       font-size: 13.5px;
       width:fit-content;
     }
-    .badge i{
-      width:10px; height:10px; border-radius:99px;
+    .pill i{
+      width:9px; height:9px; border-radius:99px;
       background: var(--accent2);
       box-shadow: 0 0 0 6px rgba(123,255,200,.08);
       display:inline-block;
     }
+    h1{
+      margin:14px 0 10px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height:1.15;
+      letter-spacing:-.9px;
+    }
+    .sub{
+      margin:0;
+      color:var(--muted);
+      font-size: 16.5px;
+    }
+
+    .meta{
+      margin-top:14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.02);
+    }
+    .tag span{
+      width:8px; height:8px; border-radius:99px;
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba(122,167,255,.07);
+      display:inline-block;
+    }
+
+    /* Article */
+    article{
+      margin-top: 20px;
+      border:1px solid var(--line);
+      border-radius: calc(var(--radius) + 4px);
+      background: rgba(255,255,255,.03);
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      padding: 22px 18px;
+    }
+    article h2{
+      margin: 26px 0 10px;
+      font-size: 22px;
+      letter-spacing: -.3px;
+    }
+    article h3{
+      margin: 22px 0 8px;
+      font-size: 18px;
+      letter-spacing: -.2px;
+    }
+    article p{
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+    article p strong{color:var(--text)}
+    .leadline{
+      color: var(--text);
+      font-size: 16.5px;
+      margin-top: 12px;
+    }
 
     .quote{
-      padding:16px 16px;
+      margin: 18px 0;
+      padding: 16px 16px;
       border-radius: var(--radius);
       border:1px dashed rgba(255,255,255,.14);
       background: rgba(255,255,255,.02);
       color: var(--muted);
-      margin-top:12px;
-      font-size: 15.2px;
+      font-size: 15.5px;
     }
     .quote b{color:var(--text)}
-    .list{
-      margin:12px 0 0;
-      padding:0;
-      list-style:none;
-      display:grid;
-      gap:10px;
+    ul{
+      margin: 10px 0 18px;
+      padding-left: 20px;
+      color: var(--muted);
     }
-    .li{
-      display:flex; gap:10px;
-      padding:12px 12px;
-      border-radius: 14px;
-      border:1px solid var(--line);
-      background: rgba(17,26,51,.42);
+    li{margin: 8px 0}
+    hr{
+      border:0;
+      height:1px;
+      background: var(--line);
+      margin: 22px 0;
     }
-    .dot{
-      width:12px; height:12px; border-radius:99px;
-      background: var(--accent);
-      margin-top:6px;
-      box-shadow: 0 0 0 6px rgba(122,167,255,.08);
-      flex: 0 0 auto;
-    }
-    .li b{display:block; margin-bottom:2px; color:var(--text)}
-    .li span{color:var(--muted); font-size: 14.6px}
 
-    .two-col{grid-column: span 6}
-    .three-col{grid-column: span 4}
-    .full{grid-column: 1 / -1}
-
-    details{
-      margin-top:14px;
+    /* Small callouts (not CTA) */
+    .callout{
       border:1px solid var(--line);
       border-radius: var(--radius);
+      background: rgba(17,26,51,.35);
       padding:14px 14px;
-      background: rgba(17,26,51,.42);
+      margin: 16px 0;
+      color: var(--muted);
     }
-    summary{
-      cursor:pointer;
-      font-weight:800;
-      color:var(--text);
-      list-style:none;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-    }
-    summary::-webkit-details-marker{display:none}
-    details p{margin:10px 0 0; color:var(--muted)}
-    .chev{opacity:.75}
+    .callout b{color:var(--text)}
 
-    .roleGrid{
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap:14px;
+    /* Footer */
+    footer{
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align:center;
+      opacity:.9;
     }
 
-    .tipsGrid{
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap:14px;
-      margin-top:10px;
-    }
-    .tip{
-      grid-column: span 6;
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      padding:14px;
-      background: rgba(17,26,51,.42);
-    }
-    .tip h4{margin:0 0 6px; font-size:15.5px}
-    .tip p{margin:0; color:var(--muted)}
-
-    .footer{
-      margin-top:28px;
-      padding:20px 0 40px;
-      color:var(--muted);
-      border-top:1px solid var(--line);
-    }
-    .small{font-size: 13.5px}
-
-    @media (max-width: 860px){
-      .hero-inner{grid-template-columns:1fr}
-      .two-col, .three-col{grid-column: 1 / -1}
-      .tip{grid-column: 1 / -1}
-      .menu{display:none}
+    @media (max-width: 720px){
+      .nav{display:none}
+      article, .hero{padding: 20px 16px}
     }
   </style>
 </head>
 
 <body>
-  <header class="wrap">
-    <nav class="nav" aria-label="Navigasi utama">
-      <a class="brand" href="#top" aria-label="Kembali ke atas">
+  <div class="wrap">
+    <!-- Top -->
+    <header class="top">
+      <a class="brand" href="#top" aria-label="AI & Ketergantungan Mahasiswa">
         <span class="logo" aria-hidden="true"></span>
         <span>AI & Ketergantungan Mahasiswa</span>
       </a>
 
-      <div class="menu" role="navigation" aria-label="Menu">
+      <nav class="nav" aria-label="Navigasi">
         <a href="#intro">Intro</a>
-        <a href="#kenapa-penting">Kenapa Penting</a>
+        <a href="#kenapa">Kenapa penting</a>
         <a href="#pola">Pola</a>
         <a href="#dampak">Dampak</a>
-        <a href="#peran">Peran</a>
-        <a href="#prinsip-sehat">Prinsip Sehat</a>
-        <a href="#mahakarya">Mahakarya</a>
-      </div>
-    </nav>
+        <a href="#prinsip">Prinsip sehat</a>
+        <a href="#mahakarya">Inti Mahakarya</a>
+      </nav>
+    </header>
 
-    <section id="top" class="hero" aria-label="Bagian pembuka">
-      <div class="hero-inner">
-        <div>
-          <div class="pill"><span aria-hidden="true"></span>Halo! 👋 Selamat datang</div>
-          <h1>Ketika “bantuan” pelan-pelan mengambil alih cara berpikir.</h1>
-          <p class="lead">
-            Ruang refleksi tentang <b>AI dan Ketergantungan Mahasiswa</b> — fenomena yang tampak wajar,
-            namun diam-diam menggeser belajar dari <b>proses</b> menjadi <b>hasil instan</b>.
-          </p>
+    <!-- Blog header -->
+    <section id="top" class="hero">
+      <div class="pill"><i aria-hidden="true"></i> Halo! 👋 Selamat datang</div>
+      <h1>Ketika “bantuan” pelan-pelan mengambil alih cara berpikir.</h1>
+      <p class="sub">
+        Ruang refleksi tentang <strong>AI dan ketergantungan mahasiswa</strong> — fenomena yang terlihat wajar,
+        tapi diam-diam menggeser belajar dari <strong>proses</strong> menjadi <strong>hasil instan</strong>.
+      </p>
 
-          <div class="cta-row">
-            <a class="btn primary" href="#intro">Mulai Baca <span aria-hidden="true">→</span></a>
-            <a class="btn" href="#mahakarya">Lihat Inti Mahakarya</a>
-          </div>
-        </div>
-
-        <aside class="hero-card" aria-label="Ringkasan cepat">
-          <h3>Ringkasan cepat</h3>
-          <p>
-            Masalahnya bukan AI dipakai atau dilarang. Masalahnya adalah saat AI menggantikan latihan berpikir.
-            Kuncinya: menjadikan AI <b>pelatih kognitif</b>, bukan <b>pengganti intelektual</b>.
-          </p>
-          <div class="stat-grid" aria-label="Sorotan">
-            <div class="stat"><span>Fokus</span><b>Proses belajar</b></div>
-            <div class="stat"><span>Risiko</span><b>Delegasi kognitif</b></div>
-            <div class="stat"><span>Arah sehat</span><b>AI sebagai pelatih</b></div>
-          </div>
-        </aside>
+      <div class="meta" aria-label="Meta artikel">
+        <span class="tag"><span aria-hidden="true"></span> Opini</span>
+        <span class="tag"><span aria-hidden="true"></span> Pendidikan</span>
+        <span class="tag"><span aria-hidden="true"></span> AI Literacy</span>
       </div>
     </section>
-  </header>
 
-  <main class="wrap">
-    <!-- INTRO -->
-    <section id="intro" class="grid" aria-label="Intro">
-      <article class="card full">
-        <p class="kicker">Intro</p>
-        <h2>Selamat datang di ruang refleksi.</h2>
-        <p>
-          AI di kampus awalnya hadir sebagai penolong: membantu menjelaskan konsep, merapikan tulisan, memberi contoh,
-          sampai mencarikan referensi. Tapi di balik kemudahan itu, ada pertanyaan yang perlu kita berani ajukan:
+    <!-- Article -->
+    <article>
+      <section id="intro">
+        <p class="leadline">
+          Di kampus, AI awalnya hadir sebagai penolong: menjelaskan konsep, merapikan tulisan, memberi contoh,
+          sampai mencarikan referensi. Tapi di balik kemudahan itu, ada pertanyaan penting yang perlu kita berani ajukan.
         </p>
 
         <div class="quote">
           <b>Apakah AI sedang membantu mahasiswa belajar… atau justru mengambil alih cara berpikirnya?</b>
         </div>
 
-        <div class="divider" aria-hidden="true"></div>
-
         <p>
-          Di sini, kita membahas bagaimana ketergantungan itu terbentuk, dampaknya yang sering tidak terlihat,
-          serta bagaimana AI seharusnya ditempatkan sebagai <b>pelatih kognitif</b>, bukan pengganti kerja intelektual.
+          Tulisan ini mencoba membahas bagaimana ketergantungan itu terbentuk, dampaknya yang sering tidak terlihat,
+          dan bagaimana AI seharusnya ditempatkan sebagai <strong>pelatih kognitif</strong>, bukan pengganti kerja intelektual.
         </p>
+      </section>
 
-        <div class="divider" aria-hidden="true"></div>
-        <span class="badge"><i aria-hidden="true"></i> Fokus: belajar tetap manusiawi & bertanggung jawab</span>
-      </article>
-    </section>
+      <hr>
 
-    <!-- WHY IMPORTANT -->
-    <section id="kenapa-penting" class="grid" aria-label="Kenapa penting">
-      <article class="card two-col">
-        <p class="kicker">Kenapa Ini Penting?</p>
-        <h2>Pendidikan bukan pabrik teks.</h2>
+      <section id="kenapa">
+        <h2>Kenapa Ini Penting?</h2>
         <p>
-          Pendidikan adalah proses membentuk kemampuan: <b>menalar</b>, <b>menyusun argumen</b>, <b>memecahkan masalah</b>,
-          dan <b>bertanggung jawab atas ide sendiri</b>.
+          Pendidikan bukan sekadar menghasilkan teks yang rapi. Pendidikan adalah proses membentuk kemampuan:
+          <strong>menalar</strong>, <strong>menyusun argumen</strong>, <strong>memecahkan masalah</strong>, dan
+          <strong>bertanggung jawab atas ide sendiri</strong>.
         </p>
-        <div class="divider" aria-hidden="true"></div>
         <p>
           Kalau AI membuat mahasiswa semakin cepat “selesai”, tetapi semakin jarang “berproses”,
-          maka yang terjadi bukan kemajuan — melainkan <b>delegasi kognitif</b>:
+          maka yang terjadi bukan kemajuan — melainkan <strong>delegasi kognitif</strong>:
           kemampuan berpikir dipinjamkan ke mesin, lalu perlahan melemah.
         </p>
-      </article>
 
-      <article class="card two-col">
-        <p class="kicker">Yang sering terlihat vs yang sebenarnya</p>
-        <ul class="list" aria-label="Perbandingan dampak">
-          <li class="li">
-            <span class="dot" aria-hidden="true"></span>
-            <div>
-              <b>Kelihatan:</b>
-              <span>tugas cepat selesai, tulisan rapi, presentasi “aman”.</span>
-            </div>
-          </li>
-          <li class="li">
-            <span class="dot" aria-hidden="true"></span>
-            <div>
-              <b>Sebenarnya:</b>
-              <span>kemampuan memulai, menalar, dan membela argumen jadi lebih rapuh.</span>
-            </div>
-          </li>
-          <li class="li">
-            <span class="dot" aria-hidden="true"></span>
-            <div>
-              <b>Efek jangka panjang:</b>
-              <span>sulit menghadapi masalah baru tanpa “ditolong AI”.</span>
-            </div>
-          </li>
-        </ul>
-      </article>
-    </section>
+        <div class="callout">
+          <b>Catatan kecil:</b> Output cepat belum tentu pemahaman kuat. Teks akademik belum tentu lahir dari nalar akademik.
+        </div>
+      </section>
 
-    <!-- PATTERNS -->
-    <section id="pola" class="grid" aria-label="Pola ketergantungan">
-      <article class="card full">
-        <p class="kicker">Pola Ketergantungan</p>
-        <h2>Ketergantungan tidak datang tiba-tiba. Ia tumbuh jadi kebiasaan.</h2>
+      <section id="pola">
+        <h2>Pola Ketergantungan yang Sering Terjadi</h2>
         <p>
-          Ketergantungan sering muncul dari hal kecil yang diulang: dari “sekadar minta contoh” menjadi “tidak bisa mulai tanpa AI”.
-          Ini empat pola yang paling sering terjadi:
+          Ketergantungan tidak datang tiba-tiba. Ia tumbuh dari kebiasaan kecil yang diulang:
+          dari “sekadar minta contoh” menjadi “tidak bisa mulai tanpa AI”.
         </p>
 
-        <ul class="list" style="margin-top:14px" aria-label="Daftar pola ketergantungan">
-          <li class="li">
-            <span class="dot" aria-hidden="true"></span>
-            <div>
-              <b>Ketergantungan Ide</b>
-              <span>Sulit memulai tanpa “dipancing” AI. Kertas kosong terasa menakutkan.</span>
-            </div>
-          </li>
-          <li class="li">
-            <span class="dot" aria-hidden="true"></span>
-            <div>
-              <b>Ketergantungan Struktur</b>
-              <span>AI menentukan alur berpikir; mahasiswa tinggal mengisi tanpa membangun kerangka sendiri.</span>
-            </div>
-          </li>
-          <li class="li">
-            <span class="dot" aria-hidden="true"></span>
-            <div>
-              <b>Ketergantungan Bahasa</b>
-              <span>Tulisan rapi, tapi gagap menjelaskan dengan kata sendiri. Pengetahuan belum “menjadi milik”.</span>
-            </div>
-          </li>
-          <li class="li">
-            <span class="dot" aria-hidden="true"></span>
-            <div>
-              <b>Ketergantungan Keputusan</b>
-              <span>AI dipakai memilih pendapat; latihan menilai dan mengambil posisi sendiri melemah.</span>
-            </div>
-          </li>
-        </ul>
+        <h3>1) Ketergantungan ide</h3>
+        <p>
+          Mahasiswa mulai sulit memulai tulisan tanpa “dipancing” AI. Kertas kosong terasa menakutkan,
+          sehingga proses merumuskan ide sendiri perlahan menghilang.
+        </p>
 
-        <details>
-          <summary>
-            Contoh situasi nyata di kampus
-            <span class="chev" aria-hidden="true">▾</span>
-          </summary>
-          <p><b>Contoh 1:</b> Esai 5 halaman selesai cepat, tapi saat ditanya argumen utama, jawabannya mengambang.</p>
-          <p><b>Contoh 2:</b> Bisa mengutip definisi, tapi sulit memberi contoh dari konteks lokal atau pengalaman.</p>
-          <p><b>Contoh 3:</b> Presentasi lancar, namun tidak mampu menjawab pertanyaan kritis karena tidak memahami struktur gagasan.</p>
-        </details>
-      </article>
-    </section>
+        <h3>2) Ketergantungan struktur</h3>
+        <p>
+          AI tidak hanya membantu, tetapi menentukan alur berpikir: pembukaan, argumen, contoh, hingga kesimpulan.
+          Mahasiswa tinggal mengisi, tanpa benar-benar membangun kerangka.
+        </p>
 
-    <!-- IMPACT -->
-    <section id="dampak" class="grid" aria-label="Dampak">
-      <article class="card full">
-        <p class="kicker">Dampak</p>
-        <h2>Nilai bisa naik, tetapi fondasi bisa rapuh.</h2>
-        <p class="hl">
+        <h3>3) Ketergantungan bahasa</h3>
+        <p>
+          Tulisan terasa rapi dan akademik, tetapi ketika diminta menjelaskan dengan kata sendiri, gagap.
+          Ini tanda bahwa pengetahuan belum benar-benar “menjadi milik”.
+        </p>
+
+        <h3>4) Ketergantungan keputusan</h3>
+        <p>
+          AI dipakai untuk menentukan pendapat: mana yang “lebih benar”, mana yang “lebih bagus”.
+          Latihan menilai, mengambil posisi, dan menanggung konsekuensi ide menjadi melemah.
+        </p>
+      </section>
+
+      <hr>
+
+      <section id="dampak">
+        <h2>Dampak yang Paling Berbahaya (dan Sering Tidak Disadari)</h2>
+        <p>
           Ketergantungan AI tidak selalu menurunkan nilai—justru kadang menaikkan performa terlihat.
-          Yang terkikis adalah kemampuan yang tidak langsung terlihat.
+          Yang rusak adalah fondasi yang tidak terlihat:
+          kemampuan berpikir, ketahanan belajar, dan keaslian intelektual.
         </p>
 
-        <ul class="list" aria-label="Daftar dampak ketergantungan">
-          <li class="li">
-            <span class="dot" aria-hidden="true"></span>
-            <div><b>Berpikir kritis melemah</b><span>Otot nalar jarang dipakai; refleks menerima hasil instan.</span></div>
-          </li>
-          <li class="li">
-            <span class="dot" aria-hidden="true"></span>
-            <div><b>Daya tahan belajar turun</b><span>Sedikit sulit → langsung cari jalan pintas.</span></div>
-          </li>
-          <li class="li">
-            <span class="dot" aria-hidden="true"></span>
-            <div><b>Keaslian intelektual memudar</b><span>Ide terasa bukan milik sendiri; identitas akademik melemah.</span></div>
-          </li>
-          <li class="li">
-            <span class="dot" aria-hidden="true"></span>
-            <div><b>Percaya diri akademik palsu</b><span>Yakin pada hasil, bukan pada kemampuan menjelaskan & mempertanggungjawabkan.</span></div>
-          </li>
+        <ul>
+          <li><strong>Berpikir kritis melemah</strong> karena otak jarang “dipaksa” menyusun alasan sendiri.</li>
+          <li><strong>Daya tahan belajar turun</strong>: sedikit sulit → refleks mencari jawaban instan.</li>
+          <li><strong>Keaslian intelektual memudar</strong>: ide terasa “bukan punya saya”.</li>
+          <li><strong>Kepercayaan diri akademik palsu</strong>: percaya pada hasil, bukan pada kemampuan menjelaskan.</li>
         </ul>
 
-        <details>
-          <summary>
-            Tanda-tanda ketergantungan (cek diri sendiri)
-            <span class="chev" aria-hidden="true">▾</span>
-          </summary>
-          <p>• Tidak bisa menulis 1 paragraf tanpa AI.</p>
-          <p>• Tidak bisa menjelaskan tulisan sendiri dalam 1 menit.</p>
-          <p>• Jarang membaca sumber asli karena merasa ringkasan sudah cukup.</p>
-          <p>• Merasa “kosong” saat diminta berpendapat tanpa bantuan.</p>
-        </details>
-      </article>
-    </section>
-
-    <!-- ROLES -->
-    <section id="peran" class="grid" aria-label="Peran kunci">
-      <article class="card full">
-        <p class="kicker">Peran Kunci</p>
-        <h2>Ini masalah sistemik: perlu kerja bareng.</h2>
-        <p>
-          Ketergantungan AI bukan hanya urusan individu. Ia dipengaruhi desain tugas, kultur akademik, dan aturan kampus.
-          Empat aktor ini punya peran penting:
-        </p>
-      </article>
-
-      <article class="card three-col">
-        <p class="kicker">1) AI</p>
-        <h3>Akselerator ↔ Pengganti</h3>
-        <p>
-          AI mempercepat akses dan pemahaman, tetapi menjadi substitutor berpikir saat menggantikan analisis, argumen, dan keputusan.
-        </p>
-      </article>
-
-      <article class="card three-col">
-        <p class="kicker">2) Mahasiswa</p>
-        <h3>Pemilik ide</h3>
-        <p>
-          Mahasiswa harus tetap jadi pemilik gagasan. AI boleh membantu latihan, tetapi posisi dan pemahaman tetap lahir dari diri sendiri.
-        </p>
-      </article>
-
-      <article class="card three-col">
-        <p class="kicker">3) Dosen</p>
-        <h3>Penjaga proses</h3>
-        <p>
-          Dosen menilai proses, meminta pertanggungjawaban ide, dan mendesain asesmen yang memunculkan nalar—bukan hanya teks rapi.
-        </p>
-      </article>
-
-      <article class="card three-col">
-        <p class="kicker">4) Kampus</p>
-        <h3>Budaya & sistem</h3>
-        <p>
-          Kampus membangun pedoman yang jelas: AI boleh, transparan, bertanggung jawab, dan penilaian menguji pemahaman.
-        </p>
-      </article>
-    </section>
-
-    <!-- HEALTHY PRINCIPLES -->
-    <section id="prinsip-sehat" class="grid" aria-label="Prinsip sehat">
-      <article class="card full">
-        <p class="kicker">Prinsip Sehat</p>
-        <h2>AI sebagai pelatih, bukan pengganti.</h2>
-        <p>
-          Arah penggunaan AI perlu diubah: dari “menyelesaikan” menjadi “melatih”.
-          Berikut beberapa kebiasaan yang bisa langsung dipakai:
-        </p>
-
-        <div class="tipsGrid" aria-label="Tips penggunaan AI yang sehat">
-          <div class="tip">
-            <h4>✅ Gunakan AI untuk bertanya balik</h4>
-            <p>Minta AI mengkritik argumenmu, menunjukkan kelemahan, dan memintamu membuktikan klaim.</p>
-          </div>
-          <div class="tip">
-            <h4>✅ Minta opsi, lalu kamu memilih dan membela</h4>
-            <p>AI memberi alternatif; kamu yang memutuskan alasan dan mempertanggungjawabkannya.</p>
-          </div>
-          <div class="tip">
-            <h4>✅ Jadikan AI alat latihan</h4>
-            <p>Latih diskusi, simulasi ujian lisan, atau merancang outline—bukan menulis final tanpa pemahaman.</p>
-          </div>
-          <div class="tip">
-            <h4>✅ Ada tahap “wajib manusia”</h4>
-            <p>Refleksi, contoh lokal, pengalaman pribadi, dan pembuktian pemahaman dengan kata sendiri.</p>
-          </div>
+        <div class="callout">
+          <b>Uji sederhana:</b> kalau kamu bisa menyerahkan tugas tapi tidak bisa menjelaskan logikanya dalam 1 menit,
+          mungkin proses belajarmu sudah mulai “dipinjam” AI.
         </div>
-      </article>
-    </section>
+      </section>
 
-    <!-- MASTERPIECE -->
-    <section id="mahakarya" class="grid" aria-label="Inti mahakarya">
-      <article class="card full">
-        <p class="kicker">✦ Inti Mahakarya</p>
-        <h2>AI seharusnya memperkuat manusia, bukan menggantikannya.</h2>
+      <hr>
+
+      <section id="prinsip">
+        <h2>Prinsip Sehat: AI sebagai Pelatih, bukan Pengganti</h2>
         <p>
-          Mahakarya dari gagasan ini adalah membangun ekosistem pendidikan yang menjadikan AI sebagai
-          <b>alat latihan berpikir</b>—membantu mahasiswa bertanya lebih tajam, menalar lebih runtut, dan menguji ide lebih kritis,
-          bukan mesin instan penyelesai tugas.
+          Solusinya bukan melarang AI. Solusinya adalah mengubah cara pakai:
+          dari “menyelesaikan” menjadi “melatih”.
         </p>
 
-        <div class="divider" aria-hidden="true"></div>
+        <ul>
+          <li><strong>Gunakan AI untuk bertanya balik</strong>: minta AI mengkritik argumenmu dan menunjukkan kelemahan.</li>
+          <li><strong>Minta opsi argumen</strong>, lalu kamu memilih dan membela posisi dengan alasan yang jelas.</li>
+          <li><strong>Jadikan AI alat latihan</strong>: simulasi ujian lisan, diskusi, atau kerangka tulisan.</li>
+          <li><strong>Ada tahap wajib manusia</strong>: refleksi, contoh lokal, pengalaman pribadi, dan pembuktian pemahaman.</li>
+        </ul>
+      </section>
 
-        <p class="hl">Target akhirnya bukan sekadar output yang bagus, tetapi mahasiswa yang:</p>
-        <ul class="list" aria-label="Target hasil akhir">
-          <li class="li"><span class="dot" aria-hidden="true"></span><div><b>Mampu berpikir mandiri</b><span>Bisa memulai dan menyusun argumen tanpa panik saat tanpa AI.</span></div></li>
-          <li class="li"><span class="dot" aria-hidden="true"></span><div><b>Mampu mempertanggungjawabkan argumen</b><span>Menjelaskan ide dengan kata sendiri dan menjawab kritik dengan tenang.</span></div></li>
-          <li class="li"><span class="dot" aria-hidden="true"></span><div><b>Punya integritas & identitas intelektual</b><span>Karya merepresentasikan pemahaman, bukan sekadar hasil mesin.</span></div></li>
+      <hr>
+
+      <section id="mahakarya">
+        <h2>✦ Inti Mahakarya</h2>
+        <p class="hl" style="color: var(--text); margin-bottom: 8px;">
+          AI seharusnya memperkuat manusia, bukan menggantikannya.
+        </p>
+        <p>
+          Mahakarya dari gagasan ini adalah membangun ekosistem pendidikan yang membuat AI berfungsi sebagai
+          <strong>alat latihan berpikir</strong>: membantu mahasiswa bertanya lebih tajam, menalar lebih runtut,
+          menguji ide lebih kritis — bukan menjadi mesin instan untuk menyelesaikan tugas.
+        </p>
+
+        <ul>
+          <li><strong>Mampu berpikir mandiri</strong> — tidak panik saat tanpa AI dan tetap bisa memulai dari nol.</li>
+          <li><strong>Mampu mempertanggungjawabkan argumen</strong> — menjelaskan dengan kata sendiri dan menjawab kritik.</li>
+          <li><strong>Punya integritas & identitas intelektual</strong> — karya merepresentasikan pemahaman, bukan sekadar hasil mesin.</li>
         </ul>
 
-        <div class="cta-row" style="margin-top:16px">
-          <a class="btn primary" href="#top">Kembali ke Atas ↑</a>
-          <a class="btn" href="#" onclick="alert('Ganti tombol ini dengan link email/WhatsApp/portfolio kamu.'); return false;">Kontak / CTA</a>
+        <div class="quote">
+          <b>Pendidikan yang baik bukan tentang seberapa cepat mesin menjawab,</b><br>
+          tetapi tentang seberapa kuat manusia belajar memahami dan berpikir.
         </div>
-      </article>
-    </section>
+      </section>
+    </article>
 
-    <footer class="footer" aria-label="Footer">
-      <div class="small">
-        © <span id="year"></span> • AI & Ketergantungan Mahasiswa • Dibuat untuk edukasi & refleksi
-      </div>
+    <footer>
+      © <span id="year"></span> — Ditulis sebagai refleksi dan edukasi.
     </footer>
-  </main>
+  </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
+```
